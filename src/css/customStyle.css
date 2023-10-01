@@ -85,7 +85,7 @@ span.typed-cursor {
 } */
 
 #app-navbar li a {
-    color: white !important;
+    color: rgb(250, 250, 250) !important;
 }
 
 body {

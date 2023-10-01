@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+
+.hero-full-container {
+    overflow: hidden;
+}
+
+.h2:after, .h2:before, h2:after, h2:before {
+    background: white !important;
+}
+
+.hero-full-container h1{
+    font-family: "Comfortaa","Play",monospace , fantasy, 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+span#typed {
+    font-size: 25px;
+}
+
+span.typed-cursor {
+    font-size: 35px;
+}
+
+#fantasy-img {
+    position: absolute;
+    top: 55%;
+    left: 45%;
+}
+
+#connect-btn-li {
+    position: absolute;
+    right: 25px;
+}
+
+#site-border-bottom,
+#site-border-left,
+#site-border-right,
+#site-border-top {
+  /* background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwZ-y5RXtsqDJ836-zZEAom_2miq9coJ06xg&usqp=CAU); */
+  background: rgb(0, 0, 0);
+  background-size: cover;
+  position: fixed;
+  z-index: 100000;
+}
+#site-border-left,
+#site-border-right {
+  top: 0;
+  bottom: 0;
+  width: 20px;
+}
+#site-border-left {
+  left: 0;
+}
+#site-border-right {
+  right: 0;
+}
+#site-border-bottom,
+#site-border-top {
+  left: 0;
+  right: 0;
+  height: 20px;
+}
+#site-border-top {
+  top: 0;
+}
+#site-border-bottom {
+  bottom: 0;
+}
+
+.text-center .h2 {
+    font-family: 'Comfortaa';
+    color: aliceblue;
+    margin-top: 14%;
+    font-size: 35px;
+}
+
+.text-center p {
+    font-size: 15px;
+    color: aliceblue;
+}
+
+/* .navbar  #app-navbar {
+    background: transparent !important;
+    color: wheat;
+} */
+
+#app-navbar li a {
+    color: white !important;
+}
+
+body {
+  background: url(https://img.freepik.com/free-vector/gradient-background-cinco-de-mayo-celebration_23-2150302983.jpg?t=st=1695297555~exp=1695298155~hmac=6348c6569d22f5111c26ecf7d18e4128fb7de7dfd63ab5aace34ac07c19fecf0);
+  /* background: linear-gradient(rgb(46, 255, 217), rgb(213, 255, 247), rgb(13, 14, 13)); */
+  /* background-size: auto; */
+  background-size: cover;
+}
+
+.section-container {
+    backdrop-filter: blur(15px);
+    background: linear-gradient(transparent, rgb(0, 0, 0) 55%);
+}
+
+#connect-btn {
+    border-radius: 12px;
+    font-size: 12px;
+    background-color: aqua;
+    font-family: "Comfortaa","Play",monospace , fantasy, 'Courier New', Courier, monospace;;
+}
+
+.card-container {
+    background-color: #12fff399;
+    backdrop-filter: blur(4px);
+    padding: 1.2rem 3rem !important;
+    position: relative;
+    border-radius: 10px;
+    width: 70%;
+    margin: -10em auto 25px auto;
+}
+
+.game-card  h3 {
+    font-family: 'Comfortaa';
+    font-weight: 800 !important;
+}

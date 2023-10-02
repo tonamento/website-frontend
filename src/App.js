@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 // import './js/main.70a66962.js'
+import React from 'react';
 import introductionVisual from "./img/introduction-visual.png"
+import Header from './components/Header';
+// import "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+// import "./js/vendor/hammer-2.0.8.js"
+// import "./js/functions-min.js"
 import './css/customStyle.css';
 import './css/main.css';
 import './App.css';
@@ -12,11 +17,13 @@ function App() {
         <div className="container"><div className="outer-nav--return"></div>
          <div id="viewport" className="l-viewport">
           <div className="l-wrapper">
+            <Header />
               <ul className="l-main-content main-content">
-                <li className="l-section section section--is-active">
+                <li className="l-section section home section--is-active">
                     <div className="intro">
                       <div className="intro--banner">
-                        <h1>Your next<br/>interactive<br/>experience</h1>
+                        <h1>Tonamento</h1>
+                        <p style={{fontSize:"25px", zIndex:"900000000000"}}>The first decentralized game brokerage</p>
                         <button className="cta">Hire Us
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
                           <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -43,7 +50,17 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section">
+                  <li className="l-section section whats">
+                    <div className="intro">
+                      <div className="intro--banner">
+                        <h1>Tonamentooooooooooooooo</h1>
+                        <p style={{fontSize:"25px"}}>The first decentralized game brokerage</p>
+                        
+                        <img src={introductionVisual} alt="Welcome"/>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="l-section section whitepaper">
                     <div className="work">
                       <h2>Selected work</h2>
                       <div className="work--lockup">
@@ -96,7 +113,7 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section">
+                  <li className="l-section section roadmap">
                     <div className="about">
                       <div className="about--banner">
                         <h2>We<br/>believe in<br/>passionate<br/>people</h2>
@@ -124,7 +141,7 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section">
+                  <li className="l-section section team">
                     <div className="contact">
                       <div className="contact--lockup">
                         <div className="modal">
@@ -142,14 +159,14 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section">
+                  <li className="l-section section open-app">
                     <div className="hire">
                       <h2>You want us to do</h2>
                       <form className="work-request">
                         <div className="work-request--options">
                           <span className="options-a">
                             <input id="opt-1" type="checkbox" value="app design" />
-                            <label for="opt-1">
+                            <label htmlFor="opt-1">
                               <svg version="1.1" id="Layer_1" x="0px" y="0px"
                               viewBox="0 0 150 111">
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -159,7 +176,7 @@ function App() {
                               App Design
                             </label>
                             <input id="opt-2" type="checkbox" value="graphic design" />
-                            <label for="opt-2">
+                            <label htmlFor="opt-2">
                               <svg version="1.1" id="Layer_1" x="0px" y="0px"
                               viewBox="0 0 150 111">
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -169,7 +186,7 @@ function App() {
                               Graphic Design
                             </label>
                             <input id="opt-3" type="checkbox" value="motion design" />
-                            <label for="opt-3">
+                            <label htmlFor="opt-3">
                               <svg version="1.1" id="Layer_1" x="0px" y="0px"
                               viewBox="0 0 150 111">
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -181,7 +198,7 @@ function App() {
                           </span>
                           <span className="options-b">
                             <input id="opt-4" type="checkbox" value="ux design" />
-                            <label for="opt-4">
+                            <label htmlFor="opt-4">
                               <svg version="1.1" id="Layer_1" x="0px" y="0px"
                               viewBox="0 0 150 111">
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -191,7 +208,7 @@ function App() {
                               UX Design
                             </label>
                             <input id="opt-5" type="checkbox" value="webdesign" />
-                            <label for="opt-5">
+                            <label htmlFor="opt-5">
                               <svg version="1.1" id="Layer_1" x="0px" y="0px"
                               viewBox="0 0 150 111" >
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -201,7 +218,7 @@ function App() {
                               Webdesign
                             </label>
                             <input id="opt-6" type="checkbox" value="marketing" />
-                            <label for="opt-6">
+                            <label htmlFor="opt-6">
                               <svg version="1.1" id="Layer_1"x="0px" y="0px"
                               viewBox="0 0 150 111">
                               <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
@@ -214,12 +231,12 @@ function App() {
                         </div>
                         <div className="work-request--information">
                           <div className="information-name">
-                            <input id="name" type="text" spellcheck="false" />
-                            <label for="name">Name</label>
+                            <input id="name" type="text" spellCheck="false" />
+                            <label htmlFor="name">Name</label>
                           </div>
                           <div className="information-email">
-                            <input id="email" type="email" spellcheck="false" />
-                            <label for="email">Email</label>
+                            <input id="email" type="email" spellCheck="false" />
+                            <label htmlFor="email">Email</label>
                           </div>
                         </div>
                         <input type="submit" value="Send Request" />

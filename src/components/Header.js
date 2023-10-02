@@ -17,7 +17,7 @@ function Header() {
         <nav className="l-side-nav">
            <ul className="side-nav">
                <li key="home" className="is-active"><span>Home</span></li>
-               <li key="whats"><span>whats Tonamento?</span></li>
+               <li key="whats"><span>Whats Tonamento?</span></li>
                <li key="whitepaper"><span>Whitepaper</span></li>
                <li key="roadmap"><span>Roadmap</span></li>
                <li key="team"><span>Team</span></li>

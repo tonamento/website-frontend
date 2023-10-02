@@ -9,16 +9,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div class="perspective effect-rotate-left">
-      <div class="container"><div class="outer-nav--return"></div>
-        <div id="viewport" class="l-viewport">
-          <div class="l-wrapper">
-            <Header />
-            <App />
-          </div>
-        </div>
-       </div>
-    </div>
+       <App />
   </React.StrictMode>
 );
 

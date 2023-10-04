@@ -1,30 +1,34 @@
 import logo from './logo.svg';
 // import './js/main.70a66962.js'
 import React from 'react';
-import introductionVisual from "./img/introduction-visual.png"
+import elementOne from "./img/element-one.png"
+import elementTwo from "./img/element-two.png"
 import Header from './components/Header';
 // import "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 // import "./js/vendor/hammer-2.0.8.js"
 // import "./js/functions-min.js"
 import './css/customStyle.css';
+import './css/animColor.css';
 import './css/main.css';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="perspective effect-rotate-left">
-        <div className="container"><div className="outer-nav--return"></div>
-         <div id="viewport" className="l-viewport">
-          <div className="l-wrapper">
-            <Header />
+      <div id='nav-cover'></div>
+      <div id='triangle'></div>
+        <div className="perspective effect-rotate-left">
+          <div className="container"><div className="outer-nav--return"></div>
+           <div id="viewport" className="l-viewport">
+            <div className="l-wrapper">
+              <Header />
               <ul className="l-main-content main-content">
                 <li className="l-section section home section--is-active">
                     <div className="intro">
                       <div className="intro--banner">
-                        <h1>Tonamento</h1>
-                        <p style={{fontSize:"25px", zIndex:"900000000000"}}>The first decentralized game brokerage</p>
-                        <button className="cta">Hire Us
+                        <span className='sign'><h1>Tonamento</h1></span>
+                        <p style={{fontSize:"25px"}}>The first decentralized<br/>game brokerage</p>
+                        <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
                           <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
                             <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
@@ -32,7 +36,8 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        <img src={introductionVisual} alt="Welcome"/>
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/>
+                        <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"420px", marginLeft:"50px !important"}}/>
                       </div>
                       <div className="intro--options">
                         <a href="#0">
@@ -56,7 +61,7 @@ function App() {
                         <h1>Tonamentooooooooooooooo</h1>
                         <p style={{fontSize:"25px"}}>The first decentralized game brokerage</p>
                         
-                        <img src={introductionVisual} alt="Welcome"/>
+                        <img src={elementOne} alt="Welcome"/>
                       </div>
                     </div>
                   </li>

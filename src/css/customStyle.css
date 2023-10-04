@@ -117,12 +117,12 @@ span.typed-cursor {
 
 #nav-cover {
     position: absolute;
-    background: #0000008a;
-    backdrop-filter: blur(2px);
+    background: #00000034;
+    /* backdrop-filter: blur(2px); */
     border-radius: 15px;
     top: 12%;
-    left: 1%;
-    width: 150px;
+    left: 70px;
+    width: 20px;
     height: 550px;
 }
 
@@ -136,3 +136,14 @@ span.typed-cursor {
     top: -50%;
     rotate: 45deg;
 } 
+
+
+@media (max-width: 767px){
+    #nav-cover {
+       display: none;
+    }
+    
+    #triangle {
+        display: none;
+    } 
+}

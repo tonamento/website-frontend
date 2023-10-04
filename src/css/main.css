@@ -205,7 +205,7 @@ body {
 .App {
     background: linear-gradient(#1bddffa8, rgba(106, 7, 255, 0.704));
     -webkit-backdrop-filter: blur(35px);
-    backdrop-filter: blur(2px) drop-shadow(2px 4px 6px black);
+    backdrop-filter: blur(1px) drop-shadow(2px 4px 6px black);
     /* background: url("../img/bg-face.jpg"); */
     font-size: 14px;
     line-height: 1.6;
@@ -252,7 +252,7 @@ body {
     width:2px;
     height:70%;
     max-height:750px;
-    background-color:#555;
+    background-color:#000;
     opacity:.35;
     z-index:10
 }
@@ -655,10 +655,16 @@ body {
     width:15px;
     fill:#fff
 }
-.intro--banner img{
-    position:absolute;
-    bottom:21px;
-    right:-12px
+.intro--banner #home-element-one {
+    position: absolute;
+    bottom: 21px;
+    left: 70%;
+}
+.intro--banner #home-element-two {
+    position: absolute;
+    bottom: 17px;
+    right: 73%;
+    rotate: -20deg;
 }
 .intro--options{
     display:-webkit-box;

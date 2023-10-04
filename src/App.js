@@ -2,6 +2,7 @@ import logo from './logo.svg';
 // import './js/main.70a66962.js'
 import React from 'react';
 import elementOne from "./img/element-one.png"
+import elementTwo from "./img/element-two.png"
 import Header from './components/Header';
 // import "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 // import "./js/vendor/hammer-2.0.8.js"
@@ -35,7 +36,8 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        <img src={elementOne} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/>
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/>
+                        <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"420px", marginLeft:"50px !important"}}/>
                       </div>
                       <div className="intro--options">
                         <a href="#0">

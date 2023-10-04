@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/85c13771158a1144b141cce7c05df4b8?family=Kvant+W01+Bold);
+
 @font-face{
     font-family:'Montserrat';
     src:url("fonts/Montserrat-Black.eot");
@@ -26,6 +28,7 @@
     font-weight:300;
     font-style:normal
 }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html{
     font-family:sans-serif;
@@ -189,15 +192,29 @@ img::-moz-selection{
 .App {
     -webkit-tap-highlight-color:#FFF498
 }
-.App {
-    background-color:#0c0c0c;
-    font-size:14px;
-    line-height:1.6;
-    font-family:"Montserrat",sans-serif;
-    color:#fff;
-    -webkit-font-smoothing:antialiased;
-    -webkit-text-size-adjust:100%
+
+body {
+    /* background: url("../img/bg-face.jpg"); */
+    /* background: url("https://www.sandbox.game/img/28_Map/Grid.jpg"); */
+    background: url("https://wallpaper-house.com/data/out/9/wallpaper2you_342350.jpg");
+    /* background-size: auto; */
+    background-size: 655px;
 }
+
+
+.App {
+    background: linear-gradient(#1bddffa8, rgba(106, 7, 255, 0.704));
+    -webkit-backdrop-filter: blur(35px);
+    backdrop-filter: blur(2px) drop-shadow(2px 4px 6px black);
+    /* background: url("../img/bg-face.jpg"); */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Montserrat",sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
 .l-viewport{
     position:relative;
     width:100%;
@@ -519,7 +536,7 @@ img::-moz-selection{
     position:absolute;
     top:3px;
     left:10px;
-    color:#555;
+    color:#eeeeee;
     font-size:14px;
     font-weight:300
 }
@@ -659,7 +676,7 @@ img::-moz-selection{
 .intro--options>a{
     max-width:250px;
     text-decoration:none;
-    color:#282828;
+    color:#939393;
     -webkit-transition:color .2s ease-in-out;
     transition:color .2s ease-in-out
 }

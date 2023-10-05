@@ -1,24 +1,56 @@
 import logo from './logo.svg';
 // import './js/main.70a66962.js'
-import React from 'react';
+import React, { useEffect } from 'react';
 import elementOne from "./img/element-one.png"
 import elementTwo from "./img/element-two.png"
 import Header from './components/Header';
 // import "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
 // import "./js/vendor/hammer-2.0.8.js"
-// import "./js/functions-min.js"
+// import "./js/mouse-cursor.js"
 import './css/customStyle.css';
 import './css/animColor.css';
+import './css/cursorAnim.css';
 import './css/main.css';
 import './App.css';
 
 function App() {
+  function OpenApp() { 
+    const cursor = document.querySelector(".cursor");
+    var timeout;
+    
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+    
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+    
+      //cursor effects when mouse stopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 1000);
+    });
+    
+    //cursor effects when mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    })
+  }
+  
+  useEffect(() => {
+    OpenApp()
+  }, [])
   return (
     <div className="App">
       <div id='nav-cover'></div>
       <div id='triangle'></div>
-        <div className="perspective effect-rotate-left">
-          <div className="container"><div className="outer-nav--return"></div>
+      <div class="cursor"></div>
+      <div className="perspective effect-rotate-left">
+        <div className="container"><div className="outer-nav--return"></div>
            <div id="viewport" className="l-viewport">
             <div className="l-wrapper">
               <Header />

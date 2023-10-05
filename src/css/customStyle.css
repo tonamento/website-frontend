@@ -115,11 +115,9 @@ span.typed-cursor {
     font-weight: 800 !important;
 }
 
-
-
 #nav-cover {
     position: absolute;
-    background: #00000034;
+    background: #6f6f6f52;
     /* backdrop-filter: blur(2px); */
     border-radius: 15px;
     top: 12%;
@@ -139,6 +137,14 @@ span.typed-cursor {
     rotate: 45deg;
 } 
 
+@media (min-width: 767px){
+    body {
+        overflow: hidden;
+    }
+    .App {
+        overflow: hidden;
+    }
+}
 
 @media (max-width: 767px){
     #nav-cover {

@@ -196,14 +196,16 @@ img::-moz-selection{
 body {
     /* background: url("../img/bg-face.jpg"); */
     /* background: url("https://www.sandbox.game/img/28_Map/Grid.jpg"); */
-    background: url("https://wallpaper-house.com/data/out/9/wallpaper2you_342350.jpg");
+    /* background: url("https://wallpaper-house.com/data/out/9/wallpaper2you_342350.jpg"); */
     /* background-size: auto; */
     background-size: 655px;
+    cursor: none;
 }
 
 
 .App {
-    background: linear-gradient(#1bddffa8, rgba(106, 7, 255, 0.704));
+    /* background: linear-gradient(#000000a8, rgba(106, 7, 255, 0.704)); */
+    background: url("../img/space5.png");
     -webkit-backdrop-filter: blur(35px);
     backdrop-filter: blur(1px) drop-shadow(2px 4px 6px black);
     /* background: url("../img/bg-face.jpg"); */
@@ -213,6 +215,7 @@ body {
     color: #fff;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+    background-size: cover;
 }
 
 .l-viewport{
@@ -570,25 +573,16 @@ body {
     left:-33px;
     color:#fff
 }
-.intro{
-    position:relative;
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    width:900px;
-    max-width:75%;
-    height:100%;
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-    -ms-flex-direction:column;
-    flex-direction:column;
-    -webkit-box-pack:center;
-    -webkit-justify-content:center;
-    -ms-flex-pack:center;
-    justify-content:center;
-    margin:0 auto
+.intro {
+    position: relative;
+    display: flex;
+    right: 120px;
+    width: 900px;
+    max-width: 75%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 @media (max-width: 1180px){
     .intro{
@@ -617,20 +611,28 @@ body {
     height:4px;
     background-color:#0f33ff
 }
-.intro--banner h1{
-    position:relative;
-    font-size:68px;
-    font-weight:900;
-    line-height:1;
-    z-index:1
+.intro--banner h1 {
+    font-size: 90px !important;
+    position: relative;
+    /* font-size: 68px; */
+    font-weight: 900;
+    line-height: 1;
+    z-index: 1;
+    margin-top: 100px !important;
+    margin-bottom: 35px;
+    margin-left: 35px;
 }
-.intro--banner button{
-    position:relative;
-    padding:5px 17px 5px 12px;
-    font-weight:700;
-    text-transform:uppercase;
-    background-color:transparent;
-    border:none
+.intro--banner p {
+    margin-left: 30 !important;
+}
+.intro--banner button {
+    position: relative;
+    padding: 5px 17px 5px 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    top: 80px;
+    background-color: transparent;
+    border: none;
 }
 .intro--banner button .btn-background{
     position:absolute;
@@ -664,7 +666,7 @@ body {
     position: absolute;
     bottom: 17px;
     right: 73%;
-    rotate: -20deg;
+    /* rotate: -20deg; */
 }
 .intro--options{
     display:-webkit-box;

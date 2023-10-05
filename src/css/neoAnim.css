@@ -9,7 +9,7 @@
 
 .sign h1{
   font-size: 90px !important;
-  font-family: "Kvant W01 Bold";
+  /* font-family: "Kvant W01 Bold"; */
 }
 
 
@@ -51,7 +51,7 @@
     color: #e6fffc;
     text-shadow: 0 0 0.6rem #e6fffc, 0 0 1.5rem #65f7ff,
       -0.2rem 0.1rem 1rem #65f7ff, 0.2rem 0.1rem 1rem #65f7ff,
-      0 -0.5rem 2rem #00ffe5, 0 0.5rem 3rem #00ffe5;
+      0 -0.5rem 1rem #19ffe8, 0 0.5rem 3rem #19ffe8;
   }
 }
 

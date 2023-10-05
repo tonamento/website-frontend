@@ -8,8 +8,9 @@ import Header from './components/Header';
 // import "./js/vendor/hammer-2.0.8.js"
 // import "./js/mouse-cursor.js"
 import './css/customStyle.css';
-import './css/animColor.css';
+import './css/neoAnim.css';
 import './css/cursorAnim.css';
+import './css/typeAnim.css';
 import './css/main.css';
 import './App.css';
 
@@ -47,7 +48,6 @@ function App() {
   return (
     <div className="App">
       <div id='nav-cover'></div>
-      <div id='triangle'></div>
       <div class="cursor"></div>
       <div className="perspective effect-rotate-left">
         <div className="container"><div className="outer-nav--return"></div>
@@ -58,8 +58,12 @@ function App() {
                 <li className="l-section section home section--is-active">
                     <div className="intro">
                       <div className="intro--banner">
-                        <span className='sign'><h1>Tonamento</h1></span>
-                        <p style={{fontSize:"25px"}}>The first decentralized<br/>game brokerage</p>
+                        <span> <h1>Tonamento</h1> </span>
+                        <div class="typing-slider">
+                           <p>The first decentralized game brokerage</p>
+                           <p>New gameFi project in base chain</p>
+                           <p>Yes, here we go!</p>
+                        </div>
                         <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
                           <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -68,8 +72,8 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/>
-                        <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"420px", marginLeft:"50px !important"}}/>
+                        {/* <img id="home-element-one" src={elementTwo} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/> */}
+                        {/* <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"350px", marginLeft:"50px !important"}}/> */}
                       </div>
                       <div className="intro--options">
                         <a href="#0">

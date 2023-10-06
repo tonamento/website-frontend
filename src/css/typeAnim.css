@@ -47,7 +47,7 @@
     right: 0;
     bottom: 0;
     border-left: 6px solid black;
-    background: linear-gradient(rgb(40, 255, 176), rgb(85, 0, 255));
+    background: linear-gradient(rgb(255, 242, 0), rgb(85, 0, 255));
     animation: typing 5s infinite, cursor 1s infinite;
 }
 .typing-slider p:nth-child(1) {

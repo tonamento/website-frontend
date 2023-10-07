@@ -47,7 +47,6 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <div id='nav-cover'></div>
       <div class="cursor"></div>
       <div className="perspective effect-rotate-left">
         <div className="container"><div className="outer-nav--return"></div>
@@ -61,8 +60,8 @@ function App() {
                         <span> <h1>Tonamento</h1> </span>
                         <div class="typing-slider">
                            <p>The first decentralized game brokerage</p>
-                           <p>New gameFi project in base chain</p>
-                           <p>Yes, here we go!</p>
+                           <p>Second generation of Game-Fi</p>
+                           {/* <p>The first decentralized game brokerage</p> */}
                         </div>
                         <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">

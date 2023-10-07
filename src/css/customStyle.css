@@ -121,7 +121,7 @@ span.typed-cursor {
     /* backdrop-filter: blur(2px); */
     border-radius: 15px;
     top: 12%;
-    left: 70px;
+    left: -10px;
     width: 20px;
     height: 550px;
 }

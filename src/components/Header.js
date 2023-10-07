@@ -15,6 +15,7 @@ function Header() {
                </div>
         </header>
         <nav className="l-side-nav">
+          <div id='nav-cover'></div>
            <ul className="side-nav">
                <li key="home" className="is-active"><span>Home</span></li>
                <li key="whats"><span>Whats Tonamento?</span></li>

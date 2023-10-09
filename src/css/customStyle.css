@@ -137,6 +137,23 @@ span.typed-cursor {
     rotate: 45deg;
 } 
 
+#what-banner p{
+    background: #00000082;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    font-family: 'Montserrat';
+    font-size: 19px;
+    padding: 10px;
+}
+
+.text-h1 {
+    font-size: 70px !important;
+    font-family: 'Righteous', Courier, monospace;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: 1.2;
+}
+
 @media (min-width: 767px){
     body {
         overflow: hidden;

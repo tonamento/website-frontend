@@ -53,7 +53,7 @@ function App() {
             <div className="l-wrapper">
               <Header />
               <ul className="l-main-content main-content">
-                <li className="l-section section  section--is-active" id='home-section'>
+                <li className="l-section section section--is-active" id='home-section'>
                     <div className="intro">
                       <div className="intro--banner">
                         <span> <h1>Tonamento</h1> </span>
@@ -91,7 +91,8 @@ function App() {
                   </li>
                   <li className="l-section section" id='whats-section'>
                     <div className="intro">
-                      <div className="intro--banner">
+                      <div className="intro--banner" id='what-banner'>
+                        <h5 className='text-h1'>Whats<br/>Tonamento?</h5>
                         <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!
                              In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.
                              Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.

@@ -205,7 +205,7 @@ body {
 
 .App {
     /* background: linear-gradient(#000000a8, rgba(106, 7, 255, 0.704)); */
-    background: url("../img/space6.png");
+    background: url("../img/space8.png");
     -webkit-backdrop-filter: blur(35px);
     backdrop-filter: blur(1px) drop-shadow(2px 4px 6px black);
     /* background: url("../img/bg-face.jpg"); */

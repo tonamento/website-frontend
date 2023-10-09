@@ -15,15 +15,29 @@
         width: 0;
    }
 }
+
 @keyframes slide {
     33.3333333333% {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         letter-spacing: 1px;
-   }
+}
     to {
         font-size: 0;
         letter-spacing: 0;
-   }
+}
+}
+
+@media (min-width: 1180px) and (max-width: 1500px) {
+    @keyframes slide {
+        33.3333333333% {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+    }
+        to {
+            font-size: 0;
+            letter-spacing: 0;
+    }
+    }
 }
 .typing-slider {
     font-family: Consolas, monospace;

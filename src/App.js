@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 // import './js/main.70a66962.js'
 import React, { useEffect } from 'react';
-import elementOne from "./img/element-one.png"
-import elementTwo from "./img/element-two.png"
+import $ from 'jquery';
+import elementOne from "./img/element-one.png";
+import elementTwo from "./img/element-two.png";
 import Header from './components/Header';
-// import "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
-// import "./js/vendor/hammer-2.0.8.js"
-// import "./js/mouse-cursor.js"
 import './css/customStyle.css';
 import './css/neoAnim.css';
 import './css/cursorAnim.css';
@@ -15,6 +13,7 @@ import './css/main.css';
 import './App.css';
 
 function App() {
+
   function OpenApp() { 
     const cursor = document.querySelector(".cursor");
     var timeout;
@@ -47,22 +46,21 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <div id='nav-cover'></div>
-      <div class="cursor"></div>
+      <div className="cursor"></div>
       <div className="perspective effect-rotate-left">
         <div className="container"><div className="outer-nav--return"></div>
            <div id="viewport" className="l-viewport">
             <div className="l-wrapper">
               <Header />
               <ul className="l-main-content main-content">
-                <li className="l-section section home section--is-active">
+                <li className="l-section section  section--is-active" id='home-section'>
                     <div className="intro">
                       <div className="intro--banner">
                         <span> <h1>Tonamento</h1> </span>
-                        <div class="typing-slider">
+                        <div className="typing-slider">
                            <p>The first decentralized game brokerage</p>
-                           <p>New gameFi project in base chain</p>
-                           <p>Yes, here we go!</p>
+                           <p>Second generation of Game-Fi</p>
+                           {/* <p>The first decentralized game brokerage</p> */}
                         </div>
                         <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
@@ -91,17 +89,18 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section whats">
+                  <li className="l-section section" id='whats-section'>
                     <div className="intro">
                       <div className="intro--banner">
-                        <h1>Tonamentooooooooooooooo</h1>
-                        <p style={{fontSize:"25px"}}>The first decentralized game brokerage</p>
-                        
-                        <img src={elementOne} alt="Welcome"/>
+                        <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!
+                             In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.
+                             Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.
+                             As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.
+                             Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section whitepaper">
+                  <li className="l-section section" id='whitepaper-section'>
                     <div className="work">
                       <h2>Selected work</h2>
                       <div className="work--lockup">
@@ -154,7 +153,7 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section roadmap">
+                  <li className="l-section section" id='roadmap-section'>
                     <div className="about">
                       <div className="about--banner">
                         <h2>We<br/>believe in<br/>passionate<br/>people</h2>
@@ -182,7 +181,7 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section team">
+                  <li className="l-section section" id='team-section'>
                     <div className="contact">
                       <div className="contact--lockup">
                         <div className="modal">
@@ -200,7 +199,7 @@ function App() {
                       </div>
                     </div>
                   </li>
-                  <li className="l-section section open-app">
+                  <li className="l-section section" id='open-app'>
                     <div className="hire">
                       <h2>You want us to do</h2>
                       <form className="work-request">

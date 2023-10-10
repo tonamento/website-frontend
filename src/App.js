@@ -2,7 +2,7 @@ import logo from './logo.svg';
 // import './js/main.70a66962.js'
 import React, { useEffect } from 'react';
 import $ from 'jquery';
-import elementOne from "./img/element-one.png";
+import elementOne from "./img/elements.png";
 import elementTwo from "./img/element-two.png";
 import Header from './components/Header';
 import './css/customStyle.css';
@@ -14,7 +14,34 @@ import './App.css';
 
 function App() {
 
-  function OpenApp() { 
+  function moveElement() {
+    var $container = $('.App');
+    var $drone = $('#home-element-one');
+    
+    var droneCenter = {
+      x: $drone.width() / 2,
+      y: $drone.height() / 2
+    };
+    
+    // The Image moving
+    $container.on('mousemove', function(event) {
+      var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 20; // Adjust the angle to control the descent
+      var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 20; // Adjust the angle to control the descent
+      
+      $drone.css('transition', 'transform 0.15s ease');
+      $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
+    });
+
+  // $container.on('mousemove', function(event) {
+  //   var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 17; // Adjust the angle to control the descent
+  //   var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 17; // Adjust the angle to control the descent
+    
+  //   $container.css('transition', 'transform 0.1s ease');
+  //   $container.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
+  // }); 
+}
+
+  function cursor() { 
     const cursor = document.querySelector(".cursor");
     var timeout;
     
@@ -42,7 +69,8 @@ function App() {
   }
   
   useEffect(() => {
-    OpenApp()
+    cursor();
+    moveElement();
   }, [])
   return (
     <div className="App">
@@ -70,7 +98,7 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        {/* <img id="home-element-one" src={elementTwo} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/> */}
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"550px"}}/>
                         {/* <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"350px", marginLeft:"50px !important"}}/> */}
                       </div>
                       <div className="intro--options">

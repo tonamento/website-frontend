@@ -144,11 +144,13 @@ span.typed-cursor {
     font-family: 'Montserrat';
     font-size: 19px;
     padding: 10px;
+    z-index: 10 !important;
 }
 
 .text-h1 {
     font-size: 70px !important;
-    font-family: 'Righteous', Courier, monospace;
+    font-weight: 800;
+    /* font-family: 'Montserrat'; */
     padding: 0px !important;
     margin: 0px !important;
     line-height: 1.2;

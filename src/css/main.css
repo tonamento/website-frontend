@@ -205,7 +205,7 @@ body {
 
 .App {
     /* background: linear-gradient(#000000a8, rgba(106, 7, 255, 0.704)); */
-    background: url("../img/space7.png");
+    background: url("../img/empty-page.png");
     -webkit-backdrop-filter: blur(35px);
     backdrop-filter: blur(1px) drop-shadow(2px 4px 6px black);
     /* background: url("../img/bg-face.jpg"); */
@@ -602,14 +602,15 @@ body {
     height:2px;
     background-color:#282828
 }
-.intro--banner::after{
-    content:"";
-    position:absolute;
-    bottom:18px;
-    left:0;
-    width:30px;
-    height:4px;
-    background-color:#0f33ff
+.intro--banner::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background-color: #0f33ff;
+    z-index: -1;
 }
 .intro--banner h1 {
     font-size: 90px !important;
@@ -657,7 +658,7 @@ body {
 .intro--banner #home-element-one {
     position: absolute;
     bottom: 21px;
-    left: 70%;
+    left: 80%;
 }
 .intro--banner #home-element-two {
     position: absolute;

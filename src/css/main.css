@@ -660,6 +660,13 @@ body {
     bottom: 21px;
     left: 80%;
 }
+
+.intro--banner #whats-element-one {
+    position: absolute;
+    bottom: 150px;
+    left: 90%;
+}
+
 .intro--banner #home-element-two {
     position: absolute;
     bottom: 17px;
@@ -688,7 +695,7 @@ body {
 }
 .intro--options h3{
     font-size:16px;
-    text-transform:uppercase
+    /* text-transform:uppercase; */
 }
 .intro--options p{
     margin-bottom:0

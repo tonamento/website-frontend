@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import React, { useEffect } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
-import elementTwo from "./img/element-two.png";
+import qElement from "./img/questionElement.png";
 import Header from './components/Header';
 import './css/customStyle.css';
 import './css/neoAnim.css';
@@ -31,14 +31,6 @@ function App() {
       $drone.css('transition', 'transform 0.15s ease');
       $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
     });
-
-  // $container.on('mousemove', function(event) {
-  //   var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 17; // Adjust the angle to control the descent
-  //   var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 17; // Adjust the angle to control the descent
-    
-  //   $container.css('transition', 'transform 0.1s ease');
-  //   $container.css("transform",`translate3d(${angleX}px, ${angleY}px, 0px)`)
-  // }); 
 }
 
   function cursor() { 
@@ -67,11 +59,72 @@ function App() {
       cursor.style.display = "none";
     })
   }
+
+ function typography() {
+    var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+  };
+
+  TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) { delta /= 2; }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+      }
+
+      setTimeout(function() {
+      that.tick();
+      }, delta);
+  };
+
+  window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.5em solid #fff}";
+      document.body.appendChild(css);
+  };
+  }
   
   useEffect(() => {
     cursor();
     moveElement();
+    typography();
   }, [])
+ 
   return (
     <div className="App">
       <div className="cursor"></div>
@@ -85,10 +138,7 @@ function App() {
                     <div className="intro">
                       <div className="intro--banner">
                         <span> <h1>Tonamento</h1> </span>
-                        <div className="typing-slider">
-                           <p>The first decentralized game brokerage</p>
-                           <p>Second generation of Game-Fi</p>
-                           {/* <p>The first decentralized game brokerage</p> */}
+                        <div class="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi" ]'>
                         </div>
                         <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
@@ -103,15 +153,15 @@ function App() {
                       </div>
                       <div className="intro--options">
                         <a href="#0">
-                          <h3>Metiew &amp; Smith</h3>
+                          <h3>Weekly Tour</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
                         </a>
                         <a href="#0">
-                          <h3>Fantasy interactive</h3>
+                          <h3>TonaChat</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
                         </a>
                         <a href="#0">
-                          <h3>Paul &amp; shark</h3>
+                          <h3>Lottory</h3>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
                         </a>
                       </div>
@@ -121,11 +171,14 @@ function App() {
                     <div className="intro">
                       <div className="intro--banner" id='what-banner'>
                         <h5 className='text-h1'>Whats<br/>Tonamento?</h5>
-                        <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!
-                             In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.
-                             Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.
-                             As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.
-                             Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
+                         <div className='dark-blur'>
+                             <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income</p>
+                             <p>In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them. </p>
+                             <p>Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes. </p>
+                             <p>As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games. </p>
+                             <p>Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
+                         </div>
+                        <img id="whats-element-one" src={qElement} alt="Welcome" style={{width:"550px"}}/>
                       </div>
                     </div>
                   </li>

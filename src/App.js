@@ -2,8 +2,9 @@ import logo from './logo.svg';
 // import './js/main.70a66962.js'
 import React, { useEffect } from 'react';
 import $ from 'jquery';
-import elementOne from "./img/element-one.png";
-import elementTwo from "./img/element-two.png";
+import elementOne from "./img/elements.png";
+import qElement from "./img/questionElement.png";
+import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/customStyle.css';
 import './css/neoAnim.css';
@@ -11,10 +12,30 @@ import './css/cursorAnim.css';
 import './css/typeAnim.css';
 import './css/main.css';
 import './App.css';
+import './css/responsive.css';
 
 function App() {
 
-  function OpenApp() { 
+  function moveElement() {
+    var $container = $('.App');
+    var $drone = $('#home-element-one');
+    
+    var droneCenter = {
+      x: $drone.width() / 2,
+      y: $drone.height() / 2
+    };
+    
+    // The Image moving
+    $container.on('mousemove', function(event) {
+      var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 20; // Adjust the angle to control the descent
+      var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 20; // Adjust the angle to control the descent
+      
+      $drone.css('transition', 'transform 0.15s ease');
+      $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
+    });
+}
+
+  function cursor() { 
     const cursor = document.querySelector(".cursor");
     var timeout;
     
@@ -40,10 +61,72 @@ function App() {
       cursor.style.display = "none";
     })
   }
+
+ function typography() {
+    var TxtType = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+  };
+
+  TxtType.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+
+      if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+
+      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+
+      if (this.isDeleting) { delta /= 2; }
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+      }
+
+      setTimeout(function() {
+      that.tick();
+      }, delta);
+  };
+
+  window.onload = function() {
+      var elements = document.getElementsByClassName('typewrite');
+      for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.5em solid #fff}";
+      document.body.appendChild(css);
+  };
+  }
   
   useEffect(() => {
-    OpenApp()
+    cursor();
+    moveElement();
+    typography();
   }, [])
+ 
   return (
     <div className="App">
       <div className="cursor"></div>
@@ -53,14 +136,11 @@ function App() {
             <div className="l-wrapper">
               <Header />
               <ul className="l-main-content main-content">
-                <li className="l-section section  section--is-active" id='home-section'>
+                <li className="l-section section section--is-active" id='home-section'>
                     <div className="intro">
                       <div className="intro--banner">
                         <span> <h1>Tonamento</h1> </span>
-                        <div className="typing-slider">
-                           <p>The first decentralized game brokerage</p>
-                           <p>Second generation of Game-Fi</p>
-                           {/* <p>The first decentralized game brokerage</p> */}
+                        <div class="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi" ]'>
                         </div>
                         <button className="cta">Games
                           <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
@@ -70,33 +150,34 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        {/* <img id="home-element-one" src={elementTwo} alt="Welcome" style={{width:"450px", marginLeft:"50px !important"}}/> */}
-                        {/* <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"350px", marginLeft:"50px !important"}}/> */}
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"420px"}}/>
+                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"700px"}}/>
                       </div>
                       <div className="intro--options">
-                        <a href="#0">
-                          <h3>Metiew &amp; Smith</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                        <a href="#0" className='home-banner' id='weekly-banner'>
+                          <h3>Weekly Tour</h3>
                         </a>
-                        <a href="#0">
-                          <h3>Fantasy interactive</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                        <a href="#0" className='home-banner' id='tona-banner'>
+                          <h3>TonaChat</h3>
                         </a>
-                        <a href="#0">
-                          <h3>Paul &amp; shark</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                        <a href="#0" className='home-banner' id='lottery-banner'>
+                          <h3>Lottery</h3>
                         </a>
                       </div>
                     </div>
                   </li>
                   <li className="l-section section" id='whats-section'>
                     <div className="intro">
-                      <div className="intro--banner">
-                        <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!
-                             In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.
-                             Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.
-                             As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.
-                             Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
+                      <div className="intro--banner" id='what-banner'>
+                        <h5 className='text-h1'>Whats<br/>Tonamento?</h5>
+                         <div className='dark-blur'>
+                             <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income</p>
+                             <p>In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them. </p>
+                             <p>Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes. </p>
+                             <p>As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games. </p>
+                             <p>Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
+                         </div>
+                        <img id="whats-element-one" src={qElement} alt="Welcome" style={{width:"550px"}}/>
                       </div>
                     </div>
                   </li>

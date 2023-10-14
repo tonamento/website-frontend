@@ -1,0 +1,9 @@
+@media (min-width:1200px) and (max-width: 1500px) {
+    .intro--banner #home-element-one {
+        left: 87%;
+        width: 390px !important;
+    }
+    .intro--banner #home-element-two {
+        left: 60%;
+    }
+}

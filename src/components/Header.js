@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../img/logo.png'
 import $ from 'jquery';
 
 function Header() {
@@ -15,10 +16,10 @@ function Header() {
     return (
       <>
        <header className="header">
-               <a className="header--logo" href="#0">
-                    <img src="assets/img/logo.png" alt="Global"/>
-                    <p>Global</p>
-               </a>
+                <a className="header--logo" href="#0">
+                        <img src={logo} alt="Global" width={55}/>
+                        {/* <p>Tonamento</p> */}
+                </a>
                <button className="header--cta cta">Hire Us</button>
                <div className="header--nav-toggle">
                     <span></span>

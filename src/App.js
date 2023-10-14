@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
 import qElement from "./img/questionElement.png";
+import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/customStyle.css';
 import './css/neoAnim.css';
@@ -11,6 +12,7 @@ import './css/cursorAnim.css';
 import './css/typeAnim.css';
 import './css/main.css';
 import './App.css';
+import './css/responsive.css';
 
 function App() {
 
@@ -148,21 +150,18 @@ function App() {
                           </svg>
                           <span className="btn-background"></span>
                         </button>
-                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"550px"}}/>
-                        {/* <img id="home-element-two" src={elementTwo} alt="Welcome" style={{width:"350px", marginLeft:"50px !important"}}/> */}
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"420px"}}/>
+                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"700px"}}/>
                       </div>
                       <div className="intro--options">
-                        <a href="#0">
+                        <a href="#0" className='home-banner' id='weekly-banner'>
                           <h3>Weekly Tour</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
                         </a>
-                        <a href="#0">
+                        <a href="#0" className='home-banner' id='tona-banner'>
                           <h3>TonaChat</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
                         </a>
-                        <a href="#0">
-                          <h3>Lottory</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                        <a href="#0" className='home-banner' id='lottery-banner'>
+                          <h3>Lottery</h3>
                         </a>
                       </div>
                     </div>

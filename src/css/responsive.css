@@ -6,4 +6,31 @@
     .intro--banner #home-element-two {
         left: 60%;
     }
+    .l-side-nav {
+        right: 87%;
+    }
+}
+
+@media (max-width: 600px){
+    h1.display-1.lh-1.mb-3 {
+        font-size: 50px !important;
+    }
+    .col-lg-6.intro--options {
+        display: grid;
+    }
+    .col-lg-6.intro--options.mt-5 {
+        width: 280px;
+        margin-left: 20px;
+    }
+    #home-element-one {
+        display: none !important;
+    }
+    #home-element-two {
+        display: none !important;
+    }
+}
+@media (max-width: 600px) and (max-height: 750px){
+    .intro--options{
+        display:none;
+    }
 }

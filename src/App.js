@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './img/logo.png';
 // import './js/main.70a66962.js'
 import React, { useEffect } from 'react';
 import $ from 'jquery';
@@ -6,12 +6,12 @@ import elementOne from "./img/elements.png";
 import qElement from "./img/questionElement.png";
 import hale from "./img/hale.png";
 import Header from './components/Header';
-import './css/customStyle.css';
 import './css/neoAnim.css';
 import './css/cursorAnim.css';
 import './css/typeAnim.css';
-import './css/main.css';
 import './App.css';
+import './css/main.css';
+import './css/customStyle.css';
 import './css/responsive.css';
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
       }
 
-      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      this.el.innerHTML = '<span className="wrap">'+this.txt+'</span>';
 
       var that = this;
       var delta = 200 - Math.random() * 100;
@@ -131,29 +131,17 @@ function App() {
     <div className="App">
       <div className="cursor"></div>
       <div className="perspective effect-rotate-left">
-        <div className="container"><div className="outer-nav--return"></div>
-           <div id="viewport" className="l-viewport">
-            <div className="l-wrapper">
-              <Header />
-              <ul className="l-main-content main-content">
-                <li className="l-section section section--is-active" id='home-section'>
-                    <div className="intro">
-                      <div className="intro--banner">
-                        <span> <h1>Tonamento</h1> </span>
-                        <div class="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi" ]'>
+     <Header />
+     <header className="masthead">
+            <div className="container px-5 mb-5">
+                <div className="row gx-5 align-items-center d-inline">
+                    <div className="col-lg-6 mb-5">
+                        <div className="mb-5 mb-lg-0 text-center text-lg-start">
+                            <h1 className="display-1 lh-1 mb-3">Tonamento</h1>
+                            <div class="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi"]'></div>
                         </div>
-                        <button className="cta">Games
-                          <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
-                          <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                            <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                          </g>
-                          </svg>
-                          <span className="btn-background"></span>
-                        </button>
-                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"420px"}}/>
-                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"700px"}}/>
-                      </div>
-                      <div className="intro--options">
+                    </div>
+                    <div className="col-lg-6 intro--options mt-5">
                         <a href="#0" className='home-banner' id='weekly-banner'>
                           <h3>Weekly Tour</h3>
                         </a>
@@ -164,210 +152,139 @@ function App() {
                           <h3>Lottery</h3>
                         </a>
                       </div>
+                    <div className="col-lg-6">
+                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"460px"}}/>
+                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"520px"}}/>
                     </div>
-                  </li>
-                  <li className="l-section section" id='whats-section'>
-                    <div className="intro">
-                      <div className="intro--banner" id='what-banner'>
-                        <h5 className='text-h1'>Whats<br/>Tonamento?</h5>
-                         <div className='dark-blur'>
-                             <p>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income</p>
-                             <p>In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them. </p>
-                             <p>Throughout the week, you can increase your rank on the leaderboard by collecting points. This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes. </p>
-                             <p>As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs. You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games. </p>
-                             <p>Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
-                         </div>
-                        <img id="whats-element-one" src={qElement} alt="Welcome" style={{width:"550px"}}/>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="l-section section" id='whitepaper-section'>
-                    <div className="work">
-                      <h2>Selected work</h2>
-                      <div className="work--lockup">
-                        <ul className="slider">
-                          <li className="slider--item slider--item-left">
-                            <a href="#0">
-                              <div className="slider--item-image">
-                                <img src="assets/img/work-victory.jpg" alt="Victory"/>
-                              </div>
-                              <p className="slider--item-title">Victory</p>
-                              <p className="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                            </a>
-                          </li>
-                          <li className="slider--item slider--item-center">
-                            <a href="#0">
-                              <div className="slider--item-image">
-                                <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith"/>
-                              </div>
-                              <p className="slider--item-title">Metiew &amp; Smith</p>
-                              <p className="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                            </a>
-                          </li>
-                          <li className="slider--item slider--item-right">
-                            <a href="#0">
-                              <div className="slider--item-image">
-                                <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak" />
-                              </div>
-                              <p className="slider--item-title">Alex Nowak</p>
-                              <p className="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                            </a>
-                          </li>
-                        </ul>
-                        <div className="slider--prev">
-                          <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                          viewBox="0 0 150 118">
-                          <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                            <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                            c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                            c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                          </g>
-                          </svg>
+                </div>
+            </div>
+      </header>
+     <section id="features" className='mt-lg-5'>
+            <div className="container px-5 mt-lg-5">
+                <div className="row gx-5 align-items-center">
+                    <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                        <div className="container-fluid px-5">
+                            <div className="row gx-5">
+                                <div className="col-md-6 mb-5 whats-text-parent-div">
+                                    <div className="text-center ml-5">
+                                        <i className="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                                       <p className="mb-0" id='whats-text'>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!<br/>
+In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.<br/>
+Throughout the week, you can increase your rank on the leaderboard by collecting points.<br/> This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.<br/>
+As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs.<br/> You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.<br/>
+Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="slider--next">
-                          <svg version="1.1" id="Layer_1"  x="0px" y="0px" viewBox="0 0 150 118">
-                          <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                            <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                          </g>
-                          </svg>
-                        </div>
-                      </div>
                     </div>
-                  </li>
-                  <li className="l-section section" id='roadmap-section'>
-                    <div className="about">
-                      <div className="about--banner">
-                        <h2>We<br/>believe in<br/>passionate<br/>people</h2>
-                        <a href="#0">Career
-                          <span>
-                            <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 150 118">
-                            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                              <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                            </g>
+                    <div className="col-lg-4 order-lg-0">
+                        <div className="features-device-mockup">
+                             <h1 className="display-1 lh-1 mb-3">Whats Tonamento?</h1>                                      
+                            <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="50" cy="50" r="50"></circle></svg>
+                                 <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                                 <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
+                                 <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="50"></circle>
                             </svg>
-                          </span>
-                        </a>
-                        <img src="assets/img/about-visual.png" alt="About Us"/>
-                      </div>
-                      <div className="about--options">
-                        <a href="#0">
-                          <h3>Winners</h3>
-                        </a>
-                        <a href="#0">
-                          <h3>Philosophy</h3>
-                        </a>
-                        <a href="#0">
-                          <h3>History</h3>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="l-section section" id='team-section'>
-                    <div className="contact">
-                      <div className="contact--lockup">
-                        <div className="modal">
-                          <div className="modal--information">
-                            <p>Pawia 5, 31-154 Kraków, Poland</p>
-                            <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                            <a href="tel:+148126287560">+48 12 628 75 60</a>
-                          </div>
-                          <ul className="modal--options">
-                            <li><a href="#0">Bēhance</a></li>
-                            <li><a href="#0">dribbble</a></li>
-                            <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
-                          </ul>
                         </div>
-                      </div>
                     </div>
-                  </li>
-                  <li className="l-section section" id='open-app'>
-                    <div className="hire">
-                      <h2>You want us to do</h2>
-                      <form className="work-request">
-                        <div className="work-request--options">
-                          <span className="options-a">
-                            <input id="opt-1" type="checkbox" value="app design" />
-                            <label htmlFor="opt-1">
-                              <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                              viewBox="0 0 150 111">
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              App Design
-                            </label>
-                            <input id="opt-2" type="checkbox" value="graphic design" />
-                            <label htmlFor="opt-2">
-                              <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                              viewBox="0 0 150 111">
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              Graphic Design
-                            </label>
-                            <input id="opt-3" type="checkbox" value="motion design" />
-                            <label htmlFor="opt-3">
-                              <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                              viewBox="0 0 150 111">
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              Motion Design
-                            </label>
-                          </span>
-                          <span className="options-b">
-                            <input id="opt-4" type="checkbox" value="ux design" />
-                            <label htmlFor="opt-4">
-                              <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                              viewBox="0 0 150 111">
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              UX Design
-                            </label>
-                            <input id="opt-5" type="checkbox" value="webdesign" />
-                            <label htmlFor="opt-5">
-                              <svg version="1.1" id="Layer_1" x="0px" y="0px"
-                              viewBox="0 0 150 111" >
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              Webdesign
-                            </label>
-                            <input id="opt-6" type="checkbox" value="marketing" />
-                            <label htmlFor="opt-6">
-                              <svg version="1.1" id="Layer_1"x="0px" y="0px"
-                              viewBox="0 0 150 111">
-                              <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
-                              </g>
-                              </svg>
-                              Marketing
-                            </label>
-                          </span>
-                        </div>
-                        <div className="work-request--information">
-                          <div className="information-name">
-                            <input id="name" type="text" spellCheck="false" />
-                            <label htmlFor="name">Name</label>
-                          </div>
-                          <div className="information-email">
-                            <input id="email" type="email" spellCheck="false" />
-                            <label htmlFor="email">Email</label>
-                          </div>
-                        </div>
-                        <input type="submit" value="Send Request" />
-                      </form>
+                </div>
+            </div>
+      </section>
+     <section className="bg-blue">
+            <div className="container px-5">
+                <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
+                    <div className="col-12 col-lg-5">
+                        <h2 className="display-4 lh-1 mb-4">Enter a new age of web design</h2>
+                        <p className="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p>
                     </div>
-                  </li>
-              </ul>
-          </div>
+                    <div className="col-sm-8 col-md-6">
+                        <div className="px-5 px-sm-0"><img className="img-fluid rounded-circle" src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div>
+                    </div>
+                </div>
+            </div>
+       </section>
+      <section className="cta">
+            <div className="cta-content">
+                <div className="container px-5">
+                    <h2 className="text-white display-1 lh-1 mb-4">
+                        Stop waiting.
+                        <br />
+                        Start building.
+                    </h2>
+                    <a className="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+                </div>
+            </div>
+        </section>
+      <section className="bg-gradient-primary-to-secondary" id="download">
+            <div className="container px-5">
+                <h2 className="text-center text-white font-alt mb-4">Get the app now!</h2>
+                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
+                    <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                </div>
+            </div>
+        </section>
+        <footer className="bg-black text-center py-5">
+            <div className="container px-5">
+                <div className="text-white-50 small">
+                    <div className="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
+                    <a href="#!">Privacy</a>
+                    <span className="mx-1">&middot;</span>
+                    <a href="#!">Terms</a>
+                    <span className="mx-1">&middot;</span>
+                    <a href="#!">FAQ</a>
+                </div>
+            </div>
+        </footer>
+        <div className="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered">
+                <div className="modal-content">
+                    <div className="modal-header bg-gradient-primary-to-secondary p-4">
+                        <h5 className="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                        <button className="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body border-0 p-4">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <div className="form-floating mb-3">
+                                <input className="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div className="form-floating mb-3">
+                                <input className="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div className="form-floating mb-3">
+                                <input className="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <div className="form-floating mb-3">
+                                <textarea className="form-control" id="message" type="text" placeholder="Enter your message here..." style={{height: '10rem'}} data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <div className="d-none" id="submitSuccessMessage">
+                                <div className="text-center mb-3">
+                                    <div className="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
+                            <div className="d-grid"><button className="btn btn-primary rounded-pill btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   </div>
   );

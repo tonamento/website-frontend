@@ -2,7 +2,8 @@
 
 body {
     background-color: #004AAD;
-  }
+    cursor: none;
+}
 
 #mainNav {
   padding: 0.35rem;
@@ -31,7 +32,7 @@ h1.display-1.lh-1.mb-3 {
 #home-element-one {
     position: absolute;
     top:15%;
-    left: 63%;
+    left: 64%;
 }
 
 #home-element-two {
@@ -40,6 +41,12 @@ h1.display-1.lh-1.mb-3 {
     left: 63%;
     /* rotate: -20deg; */
 }
+
+#whats-element-one {
+    position: absolute;
+    bottom:45%;
+    left: 40%;
+ }
 
 #tona-logo {
   margin-left: 20px !important;

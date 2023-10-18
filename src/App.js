@@ -6,9 +6,7 @@ import elementOne from "./img/elements.png";
 import qElement from "./img/questionElement.png";
 import hale from "./img/hale.png";
 import Header from './components/Header';
-import './css/neoAnim.css';
 import './css/cursorAnim.css';
-import './css/typeAnim.css';
 import './App.css';
 import './css/main.css';
 import './css/customStyle.css';
@@ -18,7 +16,7 @@ function App() {
 
   function moveElement() {
     var $container = $('.App');
-    var $drone = $('#home-element-one');
+    var $drone = $('.event-element');
     
     var droneCenter = {
       x: $drone.width() / 2,
@@ -35,32 +33,38 @@ function App() {
     });
 }
 
-  function cursor() { 
-    const cursor = document.querySelector(".cursor");
-    var timeout;
-    
-    //follow cursor on mousemove
-    document.addEventListener("mousemove", (e) => {
-      let x = e.pageX;
-      let y = e.pageY;
-    
-      cursor.style.top = y + "px";
-      cursor.style.left = x + "px";
-      cursor.style.display = "block";
-    
-      //cursor effects when mouse stopped
-      function mouseStopped(){
-        cursor.style.display = "none";
-      }
-      clearTimeout(timeout);
-      timeout = setTimeout(mouseStopped, 1000);
-    });
-    
-    //cursor effects when mouseout
-    document.addEventListener("mouseout", () => {
-      cursor.style.display = "none";
-    })
-  }
+function cursor() {
+    (function () {
+
+        const link = document.querySelectorAll('nav > .hover-this');
+        const cursor = document.querySelector('.cursor');
+  
+        const animateit = function (e) {
+              const span = this.querySelector('span');
+              const { offsetX: x, offsetY: y } = e,
+              { offsetWidth: width, offsetHeight: height } = this,
+  
+              move = 25,
+              xMove = x / width * (move * 2) - move,
+              yMove = y / height * (move * 2) - move;
+  
+              span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+  
+              if (e.type === 'mouseleave') span.style.transform = '';
+        };
+  
+        const editCursor = e => {
+              const { clientX: x, clientY: y } = e;
+              cursor.style.left = x + 'px';
+              cursor.style.top = y + 'px';
+        };
+  
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+  
+  })();
+}  
 
  function typography() {
     var TxtType = function(el, toRotate, period) {
@@ -126,10 +130,11 @@ function App() {
     moveElement();
     typography();
   }, [])
+  
  
   return (
-    <div className="App">
-      <div className="cursor"></div>
+  <div className="App"> 
+     <div className="cursor"></div>
       <div className="perspective effect-rotate-left">
      <Header />
      <header className="masthead">
@@ -153,7 +158,7 @@ function App() {
                         </a>
                       </div>
                     <div className="col-lg-6">
-                        <img id="home-element-one" src={elementOne} alt="Welcome" style={{width:"460px"}}/>
+                        <img className='event-element' id="home-element-one" src={elementOne} alt="Welcome" style={{width:"460px"}}/>
                         <img id="home-element-two" src={hale} alt="Welcome" style={{width:"520px"}}/>
                     </div>
                 </div>
@@ -168,7 +173,7 @@ function App() {
                                 <div className="col-md-6 mb-5 whats-text-parent-div">
                                     <div className="text-center ml-5">
                                         <i className="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                       <p className="mb-0" id='whats-text'>Tonamento: The First Decentralized Game Brokerage Worldwide for Stable Income!<br/>
+                                       <p className="mb-0" id='whats-text'>Tonamento: The First Decentralized Game Brokerage in the world!<br/>
 In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.<br/>
 Throughout the week, you can increase your rank on the leaderboard by collecting points.<br/> This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.<br/>
 As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs.<br/> You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.<br/>
@@ -180,7 +185,8 @@ Tonamento guarantees a stable income because the game's economic system is desig
                     </div>
                     <div className="col-lg-4 order-lg-0">
                         <div className="features-device-mockup">
-                             <h1 className="display-1 lh-1 mb-3">Whats Tonamento?</h1>                                      
+                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"350px"}}/>
+                             <h1 className="display-1 lh-1 mb-3">What's Tonamento?</h1>                                      
                             <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="50" cy="50" r="50"></circle></svg>
                                  <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">

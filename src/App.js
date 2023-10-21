@@ -7,6 +7,7 @@ import qElement from "./img/questionElement.png";
 import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/cursorAnim.css';
+import './css/timeline.css';
 import './App.css';
 import './css/main.css';
 import './css/customStyle.css';
@@ -124,11 +125,39 @@ function cursor() {
       document.body.appendChild(css);
   };
   }
+
+  function timeline() {
+    var items = document.querySelectorAll("li");
+
+    function isItemInView(item){
+  var rect = item.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+    function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+        if (isItemInView(items[i])) {
+            items[i].classList.add("show");
+        }
+        }
+    }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+}
   
   useEffect(() => {
     cursor();
     moveElement();
     typography();
+    timeline()
   }, [])
   
  
@@ -143,7 +172,7 @@ function cursor() {
                     <div className="col-lg-6 mb-5">
                         <div className="mb-5 mb-lg-0 text-center text-lg-start">
                             <h1 className="display-1 lh-1 mb-3">Tonamento</h1>
-                            <div class="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi"]'></div>
+                            <div className="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi"]'></div>
                         </div>
                     </div>
                     <div className="col-lg-6 intro--options mt-5">
@@ -167,6 +196,20 @@ function cursor() {
      <section id="features" className='mt-lg-5'>
             <div className="container px-5 mt-lg-5">
                 <div className="row gx-5 align-items-center">
+                    <div className="col-lg-4 order-lg-0">
+                        <div className="features-device-mockup">
+                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"350px"}}/>
+                             <h1 className="display-1 lh-1 mb-3" id='whats-title'>What's Tonamento?</h1>                                      
+                            <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="50" cy="50" r="50"></circle></svg>
+                                 <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                                 <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
+                                 <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                        </div>
+                     </div>
                     <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
                         <div className="container-fluid px-5">
                             <div className="row gx-5">
@@ -183,36 +226,73 @@ Tonamento guarantees a stable income because the game's economic system is desig
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 order-lg-0">
-                        <div className="features-device-mockup">
-                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"350px"}}/>
-                             <h1 className="display-1 lh-1 mb-3">What's Tonamento?</h1>                                      
-                            <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="50" cy="50" r="50"></circle></svg>
-                                 <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                 <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
-                                 <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="50"></circle>
-                            </svg>
-                        </div>
-                    </div>
                 </div>
             </div>
       </section>
-     <section className="bg-blue">
-            <div className="container px-5">
-                <div className="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                    <div className="col-12 col-lg-5">
-                        <h2 className="display-4 lh-1 mb-4">Enter a new age of web design</h2>
-                        <p className="lead fw-normal text-muted mb-5 mb-lg-0">This section is perfect for featuring some information about your application, why it was built, the problem it solves, or anything else! There's plenty of space for text here, so don't worry about writing too much.</p>
-                    </div>
-                    <div className="col-sm-8 col-md-6">
-                        <div className="px-5 px-sm-0"><img className="img-fluid rounded-circle" src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div>
-                    </div>
+     <section className="bg-blue" id='roadmap-section'>
+        <div>
+           <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>Roadmap Section</h1>
+           <ul id='parent-ul'>
+              <li className='parent-li'>
+                <div>
+                  <time>Q4 - 2023</time>
+                  <ul>
+                    <li>Making MVP</li>
+                    <li>Start social networks </li>
+                    <li>Launching smart contract on base goerli network</li>
+                    <li>Making profile for every user</li>
+                  </ul>
                 </div>
-            </div>
-       </section>
+              </li>
+              <li className='parent-li'>
+                <div>
+                  <time>Q1 - 2024</time>
+                  <ul>
+                    <li>Assembling a team</li>
+                    <li>Developing of platform and make the Playground with 12 games</li>
+                    <li>Launching tonachat</li>
+                  </ul>
+                </div>
+              </li>
+              <li className='parent-li'>
+                <div>
+                  <time>Q2 - 2024</time>
+                  <ul>
+                    <li>Launching mobile apps (IOS, Android)</li>
+                    <li>Launching smart contract on Scroll network</li>
+                    <li>make team bigger </li>
+                    <li>Launch weekly tour</li>
+                    <li>Make NFT minting landing page</li>
+                    <li>Launching ingames NFT parts </li>
+                    <li>Launching smart contract on Ethereum network </li>
+                    <li>Launching lottery section </li>
+                    <li>Cyber security Tests</li>
+                    <li>Advertising campaigns </li>
+                  </ul>
+                </div>
+              </li>
+              <li className='parent-li'>
+                <div>
+                  <time>Q3 - 2024</time>
+                  <ul>
+                  <li>Mainnet launch</li>
+                  <li>Developing the smart contract to all EVM layer2 networks</li>
+                  <li>Make NFT collection</li>
+                  </ul>
+                </div>
+              </li>
+              <li className='parent-li'>
+                <div>
+                  <time>Q4 - 2024</time>
+                  <ul>
+                    <li>Launching NFT collection </li>
+                    <li>Launching governance token</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </section>
       <section className="cta">
             <div className="cta-content">
                 <div className="container px-5">

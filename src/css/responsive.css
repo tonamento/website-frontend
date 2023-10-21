@@ -9,34 +9,94 @@
     .l-side-nav {
         right: 87%;
     }
+    #whats-text {
+        position: relative;
+        left: 55px;
+    }
+    #whats-element-one {
+        position: absolute;
+        bottom: 45%;
+        left: 60%;
+    }
+    h1.display-1.lh-1.mb-3 {
+        left: 55px;
+    }
 }
 
 @media (max-width: 600px){
     h1.display-1.lh-1.mb-3 {
-        font-size: 50px !important;
+        font-size: 35px !important;
+        font-weight: 700;
+    }
+    #whats-title {
+        margin-top: 180px !important;
+        margin-bottom: 0px !important;
+    }
+    section#features {
+        padding-bottom: 0px;
+    }
+    section#features .container-fluid {
+       padding-left: 0.5rem !important;
+       padding-right: 0.5rem !important;
+    }
+    #whats-text {
+        font-size: larger;
     }
     .col-lg-6.intro--options {
         display: grid;
     }
     .col-lg-6.intro--options.mt-5 {
         width: 280px;
-        margin-left: 20px;
+        left: 22px;
+        top: 70%;
+    }
+    .typewrite {
+        font-size: 16px;
     }
     #home-element-one {
-        display: none !important;
+        display: none;
     }
     #home-element-two {
-        display: none !important;
+        width:250px !important;
+        top: 25%;
+        left: 15%;
     }
     #whats-element-one {
-       display: none !important;
+        width:150px !important;
+        top: 50%;
+        left: 35%;
+        rotate: 5deg;
    }
     .navbar > .container.px-5 {
         display: contents;
     }
     img#tona-logo {
-        width: 45px;
-        margin-left: 15px;
+        width: 36px;
+        margin-left: 15px !important;
+    }
+    .whats-text-parent-div {
+        margin-left: 0px !important;
+        padding: 0px;
+    }
+    .whats-text-parent-div {
+        margin-left: 0px !important;
+        margin-top: 15px;
+        overflow: scroll;
+        max-height: 325px;
+        font-size: 11px;
+        padding: 0px;
+    }
+    #roadmap-section #parent-ul .parent-li {
+        position: relative;
+        list-style-type: none;
+        width: 6px;
+        background-color: white;
+        color: azure;
+        margin: auto 15px;
+        padding-top: 50px;
+    }
+    #roadmap-section #parent-ul .parent-li:nth-child(even) div {
+        left: 45px !important;
     }
 }
 

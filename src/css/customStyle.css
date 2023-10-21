@@ -2,6 +2,8 @@
 
 body {
     background-color: #004AAD;
+    overflow-x: hidden;
+    overflow-y: scroll;
     cursor: none;
 }
 
@@ -208,7 +210,7 @@ side-nav{
 }
 
 #whats-text {
-    text-align: justify;
+    text-align: start;
     color: azure !important;
     white-space: unset;
 }
@@ -216,4 +218,9 @@ side-nav{
 .whats-text-parent-div {
     width: 1200px;
     margin-left: 50px !important;
+}
+
+#roadmap-title {
+    text-align: center;
+    margin: 20px;
 }

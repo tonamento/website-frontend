@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
 import qElement from "./img/questionElement.png";
+import owl from "./img/owl.jpg"
 import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/cursorAnim.css';
@@ -26,8 +27,8 @@ function App() {
     
     // The Image moving
     $container.on('mousemove', function(event) {
-      var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 20; // Adjust the angle to control the descent
-      var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 20; // Adjust the angle to control the descent
+      var angleX = (event.offsetX - droneCenter.x) / $drone.width() * 15; // Adjust the angle to control the descent
+      var angleY = (event.offsetY - droneCenter.y) / $drone.height() * 15; // Adjust the angle to control the descent
       
       $drone.css('transition', 'transform 0.15s ease');
       $drone.css('transform', `rotate3d(1, 1, 1, ${angleX}deg) translateY(${angleY}px)`);
@@ -293,18 +294,64 @@ Tonamento guarantees a stable income because the game's economic system is desig
             </ul>
         </div>
     </section>
-      <section className="cta">
-            <div className="cta-content">
-                <div className="container px-5">
-                    <h2 className="text-white display-1 lh-1 mb-4">
-                        Stop waiting.
-                        <br />
-                        Start building.
-                    </h2>
-                    <a className="btn btn-outline-light py-3 px-4 rounded-pill" href="https://startbootstrap.com/theme/new-age" target="_blank">Download for free</a>
+    <section className="bg-blue" id='team-section'>
+        <div>
+           <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>CoreTeam</h1>
+           <div class="team-section">
+            <div class="container mt-5">
+              <div class="row mt-5">
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 1"></img>
+                    <h3>Aref Azimi</h3>
+                    <p>CEO & Founder</p>
+                  </div>
                 </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 2"></img>
+                    <h3>Ehsan Hemati</h3>
+                    <p>Community Manager</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 3"></img>
+                    <h3>Ehsan Sharifi</h3>
+                    <p>جومونگ تیم</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 4"></img>
+                    <h3>Mehdi</h3>
+                    <p>Social Manager</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 4"></img>
+                    <h3>Sarah Lee</h3>
+                    <p>Designer</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={owl} class="img-fluid" alt="Member 4"></img>
+                    <h3>Sarah Lee</h3>
+                    <p>Designer</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+    </section>
       <section className="bg-gradient-primary-to-secondary" id="download">
             <div className="container px-5">
                 <h2 className="text-center text-white font-alt mb-4">Get the app now!</h2>

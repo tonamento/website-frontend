@@ -7,7 +7,7 @@
         left: 60%;
     }
     .l-side-nav {
-        right: 87%;
+        right: 90%;
     }
     #whats-text {
         position: relative;
@@ -100,8 +100,19 @@
     }
 }
 
-@media (max-width: 600px) and (max-height: 750px){
+@media (max-width: 600px) and (max-height: 900px){
     .intro--options{
         display:none;
+    }
+}
+
+@media (max-width: 600px) and (min-height: 675px) and (max-height: 900px) {
+    .col-lg-6.intro--options.mt-5 {
+        width: 340px;
+        left: 22px;
+        top: 60%;
+    }
+    .intro--options>a {
+        max-width: 310px;
     }
 }

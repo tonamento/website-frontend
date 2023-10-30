@@ -1,26 +1,17 @@
-.cursor{
-  z-index: 999;
-  position: fixed;
-  background: #ffffff;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.cursor {
   pointer-events: none;
+  position: fixed;
+  padding: 0.6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  /* mix-blend-mode: difference; */
+  transition: transform 0.3s ease;
   box-shadow: 0 0 20px #ffffff,
-              0 0 60px #ffffff,
-              0 0 100px #ffffff;
+  0 0 60px #ffffff,
+  0 0 6px #ffffff,
+  0 0 100px #ffffff;
   animation: colors 5s infinite;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-@keyframes colors{
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
-  }
+  z-index: 100;
 }
 
 .cursor:before{
@@ -30,19 +21,11 @@
   width: 50px;
   height: 50px;
   opacity: 0.2;
-  transform: translate(-30%, -30%);
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   animation: opacity 0.5s infinite;
 }
-      
-@keyframes opacity {
-    0% {
-        opacity: 0.3;
-    } 
-    50% {
-        opacity: 0.1;
-    }
-    100% {
-        opacity: 0.3;
-    }
+
+.hover-this:hover ~ .cursor {
+  transform:translate(-50%, -50%) scale(8);
 }

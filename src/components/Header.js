@@ -40,7 +40,7 @@ function Header() {
           <div id='nav-cover'></div>
            <ul className="side-nav">
                <li className={activeKey === "home" ? "is-active" : ""} data-key="home" onClick={handleClick}><span>Home</span></li>
-               <li className={activeKey === "whats" ? "is-active" : ""} data-key="whats" onClick={handleClick}><span>Whats Tonamento?</span></li>
+               <li className={activeKey === "whats" ? "is-active" : ""} data-key="whats" onClick={handleClick}><span>Info</span></li>
                <li className={activeKey === "whitepaper" ? "is-active" : ""} data-key="whitepaper" onClick={handleClick}><span>Whitepaper</span></li>
                <li className={activeKey === "roadmap" ? "is-active" : ""} data-key="roadmap" onClick={handleClick}><span>Roadmap</span></li>
                <li className={activeKey === "team" ? "is-active" : ""} data-key="team" onClick={handleClick}><span>Team</span></li>

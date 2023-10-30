@@ -2,7 +2,10 @@
 
 body {
     background-color: #004AAD;
-  }
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: none;
+}
 
 #mainNav {
   padding: 0.35rem;
@@ -31,7 +34,7 @@ h1.display-1.lh-1.mb-3 {
 #home-element-one {
     position: absolute;
     top:15%;
-    left: 63%;
+    left: 64%;
 }
 
 #home-element-two {
@@ -40,6 +43,12 @@ h1.display-1.lh-1.mb-3 {
     left: 63%;
     /* rotate: -20deg; */
 }
+
+#whats-element-one {
+    position: absolute;
+    bottom:45%;
+    left: 40%;
+ }
 
 #tona-logo {
   margin-left: 20px !important;
@@ -63,7 +72,7 @@ section#features {
 }
 
 .l-side-nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     height: 100%;
     align-items: center;
@@ -154,7 +163,7 @@ side-nav{
     content:"05"
 }
 .side-nav li.is-active{
-    color:#0f33ff;
+    color:#00ff89;
     -webkit-transition:color .4s ease-in-out;
     transition:color .4s ease-in-out
 }
@@ -201,7 +210,7 @@ side-nav{
 }
 
 #whats-text {
-    text-align: justify;
+    text-align: start;
     color: azure !important;
     white-space: unset;
 }
@@ -209,4 +218,23 @@ side-nav{
 .whats-text-parent-div {
     width: 1200px;
     margin-left: 50px !important;
+}
+
+#roadmap-title {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-box {
+    color: white;
+    text-align: center;
+}
+
+.team-box h3 {
+    margin-top: 15px;
+}
+
+.img-fluid {
+    width: 235px;
+    border-radius: 15px;
 }

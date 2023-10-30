@@ -355,7 +355,7 @@ Tonamento guarantees a stable income because the game's economic system is desig
           </div>
         </div>
       </section>
-     <section className="bg-gradient-primary-to-secondary" id="download">
+     <section className="bg-gradient-primary-to-secondary" id="social-section">
             <div className="container px-5 text-center">
             <h1 className="display-1 lh-1 mb-3">Join our community!</h1>
             <div className='d-flex px-1 mt-5 justify-content-center' style={{filter:'invert(1)'}}>

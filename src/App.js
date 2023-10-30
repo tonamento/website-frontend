@@ -4,7 +4,10 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
 import qElement from "./img/questionElement.png";
-import owl from "./img/owl.jpg"
+import owl_profile from "./img/owl-profile.jpg";
+import dragon_profile from "./img/dragon-profile.jpg";
+import crocodile_profile from "./img/crocodile-profile.jpg";
+import cat_profile from "./img/cat-profile.jpg";
 import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/cursorAnim.css';
@@ -293,8 +296,8 @@ Tonamento guarantees a stable income because the game's economic system is desig
               </li>
             </ul>
         </div>
-    </section>
-    <section className="bg-blue" id='team-section'>
+      </section>
+     <section className="bg-blue" id='team-section'>
         <div>
            <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>CoreTeam</h1>
            <div class="team-section">
@@ -302,47 +305,47 @@ Tonamento guarantees a stable income because the game's economic system is desig
               <div class="row mt-5">
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 1"></img>
-                    <h3>Aref Azimi</h3>
+                    <img src={owl_profile} class="img-fluid" alt="Member 1"></img>
+                    <h3>Old Owl</h3>
                     <p>CEO & Founder</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 2"></img>
-                    <h3>Ehsan Hemati</h3>
+                    <img src={cat_profile} class="img-fluid" alt="Member 2"></img>
+                    <h3>Hr</h3>
+                    <p>Contact Support</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mt-5 team-box">
+                  <div class="team-member">
+                    <img src={crocodile_profile} class="img-fluid" alt="Member 2"></img>
+                    <h3>E H</h3>
                     <p>Community Manager</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 3"></img>
-                    <h3>Ehsan Sharifi</h3>
-                    <p>جومونگ تیم</p>
+                    <img src={dragon_profile} class="img-fluid" alt="Member 3"></img>
+                    <h3>Eh sh</h3>
+                    <p>Dragon</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 4"></img>
-                    <h3>Mehdi</h3>
+                    <img src={owl_profile} class="img-fluid" alt="Member 4"></img>
+                    <h3>M owl</h3>
                     <p>Social Manager</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 4"></img>
-                    <h3>Sarah Lee</h3>
-                    <p>Designer</p>
-                  </div>
-                </div>
-
-                <div class="col-md-3 mt-5 team-box">
-                  <div class="team-member">
-                    <img src={owl} class="img-fluid" alt="Member 4"></img>
+                    <img src={owl_profile} class="img-fluid" alt="Member 4"></img>
                     <h3>Sarah Lee</h3>
                     <p>Designer</p>
                   </div>
@@ -351,29 +354,45 @@ Tonamento guarantees a stable income because the game's economic system is desig
             </div>
           </div>
         </div>
-    </section>
-      <section className="bg-gradient-primary-to-secondary" id="download">
-            <div className="container px-5">
-                <h2 className="text-center text-white font-alt mb-4">Get the app now!</h2>
+      </section>
+     <section className="bg-gradient-primary-to-secondary" id="download">
+            <div className="container px-5 text-center">
+            <h1 className="display-1 lh-1 mb-3">Join our community!</h1>
+            <div className='d-flex px-1 mt-5 justify-content-center' style={{filter:'invert(1)'}}>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!"><img className="app-badge" src="assets/img/google-play-badge.svg" alt="..." /></a>
-                    <a href="#!"><img className="app-badge" src="assets/img/app-store-badge.svg" alt="..." /></a>
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                       <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/twitterx--v2.png" alt="twitterx--v2"/>
+                    </a>
+                </div>
+                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                      <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/telegram-app.png" alt="telegram-app"/>
+                    </a>
+                </div>
+                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                       <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/discord-logo.png" alt="discord-logo"/>
+                    </a>
+                </div>
+                <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                       <img width="80" height="80" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo.png" alt="external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo"/>
+                    </a>
                 </div>
             </div>
-        </section>
-        <footer className="bg-black text-center py-5">
+          </div>
+      </section>
+    <footer className="bg-black text-center py-5">
             <div className="container px-5">
                 <div className="text-white-50 small">
-                    <div className="mb-2">&copy; Your Website 2023. All Rights Reserved.</div>
-                    <a href="#!">Privacy</a>
+                    <div className="mb-2">&copy; Tonamento Website 2023. All Rights Reserved.</div>
+                    <a href="#!">terms of use</a>
                     <span className="mx-1">&middot;</span>
-                    <a href="#!">Terms</a>
-                    <span className="mx-1">&middot;</span>
-                    <a href="#!">FAQ</a>
+                    <a href="#!">privacy policy </a>
                 </div>
             </div>
-        </footer>
-        <div className="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+      </footer>
+     <div className="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-header bg-gradient-primary-to-secondary p-4">
@@ -417,7 +436,7 @@ Tonamento guarantees a stable income because the game's economic system is desig
                     </div>
                 </div>
             </div>
-        </div>
+       </div>
     </div>
   </div>
   );

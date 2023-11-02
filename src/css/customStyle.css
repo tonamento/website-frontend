@@ -28,7 +28,8 @@ h1.display-1.lh-1.mb-3 {
 
 .typewrite {
     font-size: 30px;
-    color: steelblue;
+    color: rgb(243, 255, 255);
+    position: absolute;
 }
 
 #home-element-one {
@@ -54,8 +55,17 @@ h1.display-1.lh-1.mb-3 {
   margin-left: 20px !important;
 }
 
-section#features {
+section#about-section {
     background: #004AAD;
+}
+
+.header-bg {
+    background: url('../img/dark-blue.png');
+    background-size: contain;
+    filter: blur(7px) opacity(1);
+    position: absolute;
+    height: 775px;
+    width: 1600px;
 }
 
 .masthead {
@@ -77,6 +87,7 @@ section#features {
     height: 100%;
     align-items: center;
     right: 90%;
+    z-index: 9999;
 }
 
 .l-side-nav::before {
@@ -184,29 +195,54 @@ side-nav{
 
 #weekly-banner {
     background: url('../img/banner-2.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
 }
 
 #tona-banner {
     background: url('../img/banner-1.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
 }
 
 #lottery-banner {
     background: url('../img/banner-3.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
+}
+
+.intro--options a p {
+    position: relative;
+    line-height: 28px;
+    top: 30%;
+    left: 10%;
+    font-size: 27px;
+    font-weight: 400;
+    color: #004AAD;
+    font-family: fantasy;
+    transition:0.5s;
+}
+
+.intro--options a p:hover {
+    color: rgb(0, 170, 216);
 }
 
 #whats-text {
@@ -238,3 +274,4 @@ side-nav{
     width: 235px;
     border-radius: 15px;
 }
+

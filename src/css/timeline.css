@@ -31,7 +31,7 @@
   padding: 15px;
   border-radius: 5px;
   bottom: 0;
-  background: rgba(42,50,113, .28);
+  background: #4980ff91;
 }
 
 #roadmap-section #parent-ul .parent-li:nth-child(odd) div {

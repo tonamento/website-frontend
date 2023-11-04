@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Poppins:wght@800&family=Righteous&family=Rubik+Mono+One&family=Russo+One&display=swap');
 
 body {
     background-color: #004AAD;
@@ -16,9 +16,9 @@ body {
 
 h1.display-1.lh-1.mb-3 {
     font-size: 90px !important;
-    color: white;
     position: relative;
     /* font-size: 68px; */
+    color: white;
     font-weight: 900;
     line-height: 1;
     z-index: 1;
@@ -26,10 +26,18 @@ h1.display-1.lh-1.mb-3 {
     margin-bottom: 35px;
 }
 
+.text-blue-sky {
+    color: #24f5ff;
+}
+.text-shadow-black {
+    text-shadow: 6px 6px 5px #0000009e;
+}
+
 .typewrite {
     font-size: 30px;
-    color: rgb(243, 255, 255);
+    color: #f6ffff;
     position: absolute;
+    text-shadow: 6px 4px 10px #000000;
 }
 
 #home-element-one {
@@ -60,9 +68,9 @@ section#about-section {
 }
 
 .header-bg {
-    background: url('../img/dark-blue.png');
+    background: url(https://images.hdqwalls.com/wallpapers/futuristic-city-dark-evening-rain-4k-o8.jpg);
     background-size: contain;
-    filter: blur(7px) opacity(1);
+    filter: blur(0px) opacity(0.9);
     position: absolute;
     height: 775px;
     width: 1600px;
@@ -231,18 +239,18 @@ side-nav{
 
 .intro--options a p {
     position: relative;
-    line-height: 28px;
+    line-height: 35px;
     top: 30%;
     left: 10%;
     font-size: 27px;
     font-weight: 400;
-    color: #004AAD;
-    font-family: fantasy;
-    transition:0.5s;
+    color: rgb(0, 170, 216);
+    font-family: 'Bebas Neue', 'Rubik Mono One';
+    transition: 0.5s;
 }
 
 .intro--options a p:hover {
-    color: rgb(0, 170, 216);
+    color: #004AAD;
 }
 
 #whats-text {

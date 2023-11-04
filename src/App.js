@@ -178,7 +178,7 @@ function cursor() {
                 <div className="row gx-5 align-items-center d-lg-inline">
                     <div className="col-lg-6 mb-5">
                         <div className="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 className="display-1 lh-1 mb-3">Tonamento</h1>
+                            <h1 className="display-1 lh-1 mb-3 text-shadow-black text-blue-sky">Tonamento</h1>
                             <div className="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi"]'></div>
                         </div>
                     </div>

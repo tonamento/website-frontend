@@ -31,9 +31,10 @@
 
 @media (max-width: 600px){
     h1.display-1.lh-1.mb-3 {
-        font-size: 40px !important;
+        margin-left: 15px;
+        font-size: 30px !important;
         font-weight: 100;
-        font-family: fantasy, system-ui, -apple-system;
+        font-family: "Fugaz One";
     }
     #whats-title {
         margin-top: 180px !important;
@@ -74,7 +75,7 @@
     }
     #whats-element-one {
         width: 90px !important;
-        top: 40%;
+        top: 45%;
         left: 55%;
         rotate: 5deg;
     }
@@ -141,15 +142,20 @@
         margin-top: 20px;
     }
     .header-bg {
-        background: url(http://localhost:3000/static/media/bg-blue.064423a84e4f1689b862.png);
+        background: url(../img/bg-mobile.png) !important;
         background-size: cover;
-        filter: blur(5px) opacity(1) drop-shadow(2px 4px 6px black);
+        filter: blur(2px) opacity(1) drop-shadow(2px 4px 6px black);
         height: 115vh;
         background-position: left;
         width: 100vw;
     }
+    #home-section .col-lg-6.mb-5 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .intro--options a p {
         left: 15%;
+        font-size: 35px;
     }
 }
 
@@ -176,8 +182,19 @@
 }
 
 @media (width:360px){
-    .header-bg {
+    .header-bg, #socials-section, footer {
         width: 110vw;
+    }
+}
+
+@media (min-width:330px) and (max-width:400px) {
+    h1.display-1.lh-1.mb-3 {
+        font-size: 50px !important;
+        color: white;
+    }
+    .typewrite {
+        font-size: 20px;
+        color: white;
     }
 }
 

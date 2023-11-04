@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Righteous&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa:wght@700&family=Lobster&family=Noto+Sans+Display:ital,wght@1,900&family=Play:wght@400;700&family=Poppins:wght@800&family=Righteous&family=Rubik+Mono+One&family=Russo+One&display=swap');
 
 body {
     background-color: #004AAD;
@@ -16,9 +16,9 @@ body {
 
 h1.display-1.lh-1.mb-3 {
     font-size: 90px !important;
-    color: white;
     position: relative;
     /* font-size: 68px; */
+    color: white;
     font-weight: 900;
     line-height: 1;
     z-index: 1;
@@ -26,9 +26,18 @@ h1.display-1.lh-1.mb-3 {
     margin-bottom: 35px;
 }
 
+.text-blue-sky {
+    color: #24f5ff;
+}
+.text-shadow-black {
+    text-shadow: 6px 6px 5px #0000009e;
+}
+
 .typewrite {
     font-size: 30px;
-    color: steelblue;
+    color: #f6ffff;
+    position: absolute;
+    text-shadow: 6px 4px 10px #000000;
 }
 
 #home-element-one {
@@ -54,8 +63,17 @@ h1.display-1.lh-1.mb-3 {
   margin-left: 20px !important;
 }
 
-section#features {
+section#about-section {
     background: #004AAD;
+}
+
+.header-bg {
+    background: url(https://images.hdqwalls.com/wallpapers/futuristic-city-dark-evening-rain-4k-o8.jpg);
+    background-size: contain;
+    filter: blur(0px) opacity(0.9);
+    position: absolute;
+    height: 775px;
+    width: 1600px;
 }
 
 .masthead {
@@ -77,6 +95,7 @@ section#features {
     height: 100%;
     align-items: center;
     right: 90%;
+    z-index: 9999;
 }
 
 .l-side-nav::before {
@@ -184,29 +203,54 @@ side-nav{
 
 #weekly-banner {
     background: url('../img/banner-2.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
 }
 
 #tona-banner {
     background: url('../img/banner-1.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
 }
 
 #lottery-banner {
     background: url('../img/banner-3.png');
-    background-size: cover;
+    background-size: contain;
+    background-position-y:center;
+    background-position-x:center;
+    background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
-    height: 100px;
-    margin: 7px 5px;
+    height: 130px;
+    /* margin: 5px 0px; */
+}
+
+.intro--options a p {
+    position: relative;
+    line-height: 35px;
+    top: 30%;
+    left: 10%;
+    font-size: 27px;
+    font-weight: 400;
+    color: rgb(0, 170, 216);
+    font-family: 'Bebas Neue', 'Rubik Mono One';
+    transition: 0.5s;
+}
+
+.intro--options a p:hover {
+    color: #004AAD;
 }
 
 #whats-text {
@@ -238,3 +282,4 @@ side-nav{
     width: 235px;
     border-radius: 15px;
 }
+

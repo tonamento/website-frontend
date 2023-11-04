@@ -10834,7 +10834,7 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: #2937f0 !important;
+  background: #4980ff91 !important;
 }
 
 .font-alt {
@@ -11160,9 +11160,10 @@ footer a:hover, footer a:active, footer a:focus {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border-radius: 10px;
-  background: #00000057;
+  background: #4980ff91;
   list-style: none;
-  padding: 5px 10px;
+  padding: 0px;
+  /* padding: 5px 10px; */
   /* margin-top: 150px !important; */
 }
 .intro--options>a{

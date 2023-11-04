@@ -3,11 +3,13 @@ import logo from './img/logo.png';
 import React, { useEffect } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
-import qElement from "./img/questionElement.png";
+import qElement from "./img/question-mark.png";
 import owl_profile from "./img/owl-profile.jpg";
 import dragon_profile from "./img/dragon-profile.jpg";
 import crocodile_profile from "./img/crocodile-profile.jpg";
 import cat_profile from "./img/cat-profile.jpg";
+import cow_profile from "./img/cow-profile.jpg";
+import eagle_profile from "./img/eagle-profile.jpg";
 import hale from "./img/hale.png";
 import Header from './components/Header';
 import './css/cursorAnim.css';
@@ -87,9 +89,9 @@ function cursor() {
       var fullTxt = this.toRotate[i];
 
       if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+         this.txt = fullTxt.substring(0, this.txt.length - 1);
       } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+         this.txt = fullTxt.substring(0, this.txt.length + 1);
       }
 
       this.el.innerHTML = '<span className="wrap">'+this.txt+'</span>';
@@ -168,26 +170,27 @@ function cursor() {
   return (
   <div className="App"> 
      <div className="cursor"></div>
+     <div className="header-bg"></div>
       <div className="perspective effect-rotate-left">
      <Header />
-     <header className="masthead">
+     <header className="masthead" id='home-section'>
             <div className="container px-5 mb-5">
-                <div className="row gx-5 align-items-center d-inline">
+                <div className="row gx-5 align-items-center d-lg-inline">
                     <div className="col-lg-6 mb-5">
                         <div className="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 className="display-1 lh-1 mb-3">Tonamento</h1>
+                            <h1 className="display-1 lh-1 mb-3 text-shadow-black text-blue-sky">Tonamento</h1>
                             <div className="typewrite" data-period="2000" data-type='[ "The first decentralized game brokerage", "Second generation of Game-Fi"]'></div>
                         </div>
                     </div>
                     <div className="col-lg-6 intro--options mt-5">
                         <a href="#0" className='home-banner' id='weekly-banner'>
-                          <h3>Weekly Tour</h3>
+                          <p>Weekly <br/>Tour</p>
                         </a>
                         <a href="#0" className='home-banner' id='tona-banner'>
-                          <h3>TonaChat</h3>
+                          <p>TonaChat</p>
                         </a>
                         <a href="#0" className='home-banner' id='lottery-banner'>
-                          <h3>Lottery</h3>
+                          <p>Lottery</p>
                         </a>
                       </div>
                     <div className="col-lg-6">
@@ -197,12 +200,12 @@ function cursor() {
                 </div>
             </div>
       </header>
-     <section id="features" className='mt-lg-5'>
-            <div className="container px-5 mt-lg-5">
+     <section className='mt-5 mt-xl-6' id="info-section">
+            <div className="container px-5 mt-5 mt-xl-6">
                 <div className="row gx-5 align-items-center">
                     <div className="col-lg-4 order-lg-0">
                         <div className="features-device-mockup">
-                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"350px"}}/>
+                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"300px"}}/>
                              <h1 className="display-1 lh-1 mb-3" id='whats-title'>What's Tonamento?</h1>                                      
                             <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="50" cy="50" r="50"></circle></svg>
@@ -302,7 +305,7 @@ Tonamento guarantees a stable income because the game's economic system is desig
            <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>CoreTeam</h1>
            <div class="team-section">
             <div class="container mt-5">
-              <div class="row mt-5">
+              <div class="row mt-5" id='team-div-parent'>
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
                     <img src={owl_profile} class="img-fluid" alt="Member 1"></img>
@@ -314,40 +317,40 @@ Tonamento guarantees a stable income because the game's economic system is desig
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
                     <img src={cat_profile} class="img-fluid" alt="Member 2"></img>
-                    <h3>Hr</h3>
-                    <p>Contact Support</p>
+                    <h3>LazyBoy</h3>
+                    <p>Marketing Manager</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
                     <img src={crocodile_profile} class="img-fluid" alt="Member 2"></img>
-                    <h3>E H</h3>
-                    <p>Community Manager</p>
+                    <h3>Sobek</h3>
+                    <p>Community Manager </p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={dragon_profile} class="img-fluid" alt="Member 3"></img>
-                    <h3>Eh sh</h3>
-                    <p>Dragon</p>
+                      <img src={dragon_profile} class="img-fluid" alt="Member 3"></img>
+                      <h3>Caraxes</h3>
+                      <p>Developer</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl_profile} class="img-fluid" alt="Member 4"></img>
-                    <h3>M owl</h3>
-                    <p>Social Manager</p>
+                    <img src={cow_profile} class="img-fluid" alt="Member 4"></img>
+                    <h3>Witness</h3>
+                    <p>CRM</p>
                   </div>
                 </div>
 
                 <div class="col-md-3 mt-5 team-box">
                   <div class="team-member">
-                    <img src={owl_profile} class="img-fluid" alt="Member 4"></img>
-                    <h3>Sarah Lee</h3>
-                    <p>Designer</p>
+                    <img src={eagle_profile} class="img-fluid" alt="Member 4"></img>
+                    <h3>Justin</h3>
+                    <p>Developer</p>
                   </div>
                 </div>
               </div>
@@ -355,7 +358,7 @@ Tonamento guarantees a stable income because the game's economic system is desig
           </div>
         </div>
       </section>
-     <section className="bg-gradient-primary-to-secondary" id="download">
+     <section className="bg-gradient-primary-to-secondary" id="socials-section">
             <div className="container px-5 text-center">
             <h1 className="display-1 lh-1 mb-3">Join our community!</h1>
             <div className='d-flex px-1 mt-5 justify-content-center' style={{filter:'invert(1)'}}>

@@ -1,6 +1,6 @@
 import logo from './img/logo.png';
 // import './js/main.70a66962.js'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
 import qElement from "./img/question-mark.png";
@@ -20,6 +20,28 @@ import './css/customStyle.css';
 import './css/responsive.css';
 
 function App() {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos == 0) {
+        setOpacity(1);
+      } else if (currentScrollPos > 600){
+        setOpacity(0.05);
+      } else if (currentScrollPos > 800){
+        setOpacity(0.015);
+      } else {
+        setOpacity(0.15);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   function moveElement() {
     var $container = $('.App');
@@ -40,7 +62,7 @@ function App() {
     });
 }
 
-function cursor() {
+  function cursor() {
     (function () {
 
         const link = document.querySelectorAll('nav > .hover-this');
@@ -73,7 +95,7 @@ function cursor() {
   })();
 }  
 
- function typography() {
+   function typography() {
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
@@ -130,7 +152,7 @@ function cursor() {
       css.innerHTML = ".typewrite > .wrap { border-right: 0.5em solid #fff}";
       document.body.appendChild(css);
   };
-  }
+}
 
   function timeline() {
     var items = document.querySelectorAll("li");
@@ -153,6 +175,11 @@ function cursor() {
         }
     }
 
+    
+    if (window.innerWidth < 600) {
+       $(".parent-li").addClass("show")
+       console.log(window.innerWidth)
+  }
   // listen for events
   window.addEventListener("load", callbackFunc);
   window.addEventListener("resize", callbackFunc);
@@ -170,7 +197,7 @@ function cursor() {
   return (
   <div className="App"> 
      <div className="cursor"></div>
-     <div className="header-bg"></div>
+     <div className="header-bg" style={{opacity:opacity}}></div>
       <div className="perspective effect-rotate-left">
      <Header />
      <header className="masthead" id='home-section'>
@@ -194,8 +221,8 @@ function cursor() {
                         </a>
                       </div>
                     <div className="col-lg-6">
-                        <img className='event-element' id="home-element-one" src={elementOne} alt="Welcome" style={{width:"460px"}}/>
-                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"520px"}}/>
+                        <img className='event-element' id="home-element-one" src={elementOne} alt="Welcome" style={{width:"450px"}}/>
+                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"500px"}}/>
                     </div>
                 </div>
             </div>
@@ -385,7 +412,7 @@ Tonamento guarantees a stable income because the game's economic system is desig
             </div>
           </div>
       </section>
-    <footer className="bg-black text-center py-5">
+    <footer className="bg-black text-center py-5" id='footer-section'>
             <div className="container px-5">
                 <div className="text-white-50 small">
                     <div className="mb-2">&copy; Tonamento Website 2023. All Rights Reserved.</div>

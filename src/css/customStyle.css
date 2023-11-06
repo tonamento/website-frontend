@@ -22,7 +22,6 @@ h1.display-1.lh-1.mb-3 {
     font-weight: 900;
     line-height: 1;
     z-index: 1;
-    margin-top: 30px !important;
     margin-bottom: 35px;
 }
 
@@ -49,7 +48,7 @@ h1.display-1.lh-1.mb-3 {
 #home-element-two {
     position: absolute;
     top: 20%;
-    left: 63%;
+    left: 62%;
     /* rotate: -20deg; */
 }
 
@@ -68,12 +67,14 @@ section#about-section {
 }
 
 .header-bg {
-    background: url(https://images.hdqwalls.com/wallpapers/futuristic-city-dark-evening-rain-4k-o8.jpg);
-    background-size: contain;
-    filter: blur(0px) opacity(0.9);
-    position: absolute;
+    /* background: url(https://images.hdqwalls.com/wallpapers/futuristic-city-dark-evening-rain-4k-o8.jpg); */
+    background: url(../img/Metaverse-3.png);
+    background-size: cover;
+    filter: blur(0px) opacity(0.85);
+    position: fixed;
     height: 775px;
     width: 1600px;
+    transition: 0.5s ease-in-out;
 }
 
 .masthead {
@@ -142,7 +143,7 @@ side-nav{
 .side-nav>li {
     position: relative;
     top: -5px;
-    color: #fff;
+    color: #111;
     font-size: 15px;
     cursor: pointer;
     display: list-item;
@@ -152,7 +153,7 @@ side-nav{
     position:relative;
     top:3px;
     left:10px;
-    color:#fff;
+    color:#111;
     font-size:14px;
     font-weight:300;
     opacity:0;
@@ -162,7 +163,7 @@ side-nav{
     position:absolute;
     top:3px;
     left:10px;
-    color:#eeeeee;
+    color:#111;
     font-size:14px;
     font-weight:300
 }

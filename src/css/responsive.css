@@ -32,9 +32,8 @@
 @media (max-width: 600px){
     h1.display-1.lh-1.mb-3 {
         margin-left: 15px;
-        font-size: 30px !important;
-        font-weight: 100;
-        font-family: "Fugaz One";
+        font-size: 45px !important;
+        font-family: "Fugaz One" !important;
     }
     #whats-title {
         margin-top: 180px !important;
@@ -75,8 +74,8 @@
     }
     #whats-element-one {
         width: 90px !important;
-        top: 45%;
-        left: 55%;
+        top: 42%;
+        left: 60%;
         rotate: 5deg;
     }
     .navbar > .container.px-5 {
@@ -142,9 +141,9 @@
         margin-top: 20px;
     }
     .header-bg {
-        background: url(../img/bg-mobile.png) !important;
-        background-size: cover;
-        filter: blur(2px) opacity(1) drop-shadow(2px 4px 6px black);
+        background: url(../img/da-rk-blue.png) !important;
+        background-size: cover !important;
+        filter: blur(3px) opacity(1);
         height: 115vh;
         background-position: left;
         width: 100vw;

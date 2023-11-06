@@ -4,16 +4,15 @@ import $ from 'jquery';
 
 function Header() {
     const [activeNavItem, setActiveNavItem] = useState('Home');
-    
-    
+
     const handleNavItemClick = (navItem) => {
         setActiveNavItem(navItem);
-        
         const roadmapSection = document.querySelector(`#${navItem.toLowerCase()}-section`); 
         roadmapSection.scrollIntoView({ behavior: "smooth" });
         
         // Scroll to the roadmap section
     };
+
   return (
       <>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
@@ -31,7 +30,7 @@ function Header() {
                     <button className="btn btn-primary px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
                         <span className="d-flex align-items-center">
                             <i className="bi-chat-text-fill me-2"></i>
-                            <span className="small">Open Console</span>
+                            <span className="small">Playground</span>
                         </span>
                     </button>
                 </div>

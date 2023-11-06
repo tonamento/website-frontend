@@ -74,7 +74,7 @@ time {
     width: 250px;
   }
   #roadmap-section #parent-ul .parent-li:nth-child(even) div {
-    left: -289px;
+    left: 0px;
     /*250+45-6*/
   }
 }

@@ -2,6 +2,7 @@ import logo from './img/logo.png';
 // import './js/main.70a66962.js'
 import React, { useEffect, useState } from 'react';
 import $ from 'jquery';
+import { throttle } from 'lodash';
 import elementOne from "./img/elements.png";
 import qElement from "./img/question-mark.png";
 import owl_profile from "./img/owl-profile.jpg";
@@ -22,8 +23,7 @@ import './css/responsive.css';
 function App() {
   const [opacity, setOpacity] = useState(1);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       if (currentScrollPos == 0) {
         setOpacity(1);
@@ -34,16 +34,9 @@ function App() {
       } else {
         setOpacity(0.15);
       }
-    };
+};
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  function moveElement() {
+  const moveElement = () => {
     var $container = $('.App');
     var $drone = $('.event-element');
     
@@ -62,7 +55,7 @@ function App() {
     });
 }
 
-  function cursor() {
+  const cursor = () => {
     (function () {
 
         const link = document.querySelectorAll('nav > .hover-this');
@@ -95,7 +88,7 @@ function App() {
   })();
 }  
 
-   function typography() {
+   const typography = () => {
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
       this.el = el;
@@ -154,7 +147,7 @@ function App() {
   };
 }
 
-  function timeline() {
+  const timeline = () => {
     var items = document.querySelectorAll("li");
 
     function isItemInView(item){
@@ -181,18 +174,17 @@ function App() {
        console.log(window.innerWidth)
   }
   // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
   window.addEventListener("scroll", callbackFunc);
 }
   
   useEffect(() => {
     cursor();
     moveElement();
-    typography();
-    timeline()
   }, [])
   
+  typography();
+  timeline();
+  window.addEventListener('scroll', handleScroll);
  
   return (
   <div className="App"> 
@@ -217,18 +209,18 @@ function App() {
                           <p>TonaChat</p>
                         </a>
                         <a href="#0" className='home-banner' id='lottery-banner'>
-                          <p>Lottery</p>
+                          <p>Table<br/>Score</p>
                         </a>
                       </div>
                     <div className="col-lg-6">
-                        <img className='event-element' id="home-element-one" src={elementOne} alt="Welcome" style={{width:"450px"}}/>
-                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"500px"}}/>
+                        <img className='event-element' id="home-element-one" src={elementOne} alt="Welcome" style={{width:"30vw"}}/>
+                        <img id="home-element-two" src={hale} alt="Welcome" style={{width:"33vw"}}/>
                     </div>
                 </div>
             </div>
       </header>
-     <section className='mt-5 mt-xl-6' id="info-section">
-            <div className="container px-5 mt-5 mt-xl-6">
+     <section className='mt-5' id="info-section">
+            <div className="container px-5 mt-5">
                 <div className="row gx-5 align-items-center">
                     <div className="col-lg-4 order-lg-0">
                         <div className="features-device-mockup">
@@ -390,22 +382,22 @@ Tonamento guarantees a stable income because the game's economic system is desig
             <h1 className="display-1 lh-1 mb-3">Join our community!</h1>
             <div className='d-flex px-1 mt-5 justify-content-center' style={{filter:'invert(1)'}}>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="https://twitter.com/tonamento">
                        <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/twitterx--v2.png" alt="twitterx--v2"/>
                     </a>
                 </div>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="https://t.me/tonamento">
                       <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/telegram-app.png" alt="telegram-app"/>
                     </a>
                 </div>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="https://discord.gg/QyrFXsN">
                        <img width="80" height="80" src="https://img.icons8.com/ios-filled/100/discord-logo.png" alt="discord-logo"/>
                     </a>
                 </div>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                    <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
+                    <a className="me-lg-3 mb-4 mb-lg-0" href="https://github.com/tonamento">
                        <img width="80" height="80" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/96/external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo.png" alt="external-github-with-cat-logo-an-online-community-for-software-development-logo-bold-tal-revivo"/>
                     </a>
                 </div>

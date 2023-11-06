@@ -41,9 +41,9 @@ function Header() {
            <ul className="side-nav">
               <li className={activeNavItem === 'Home' ? 'is-active' : ''} onClick={() => handleNavItemClick('Home')}><span>Home</span></li>
               <li className={activeNavItem === 'Info' ? 'is-active' : ''} onClick={() => handleNavItemClick('Info')}><span>Info</span></li>
-              <li className={activeNavItem === 'Socials' ? 'is-active' : ''} onClick={() => handleNavItemClick('Socials')}><span>Socials</span></li>
               <li className={activeNavItem === 'Roadmap' ? 'is-active' : ''} onClick={() => handleNavItemClick('Roadmap')}><span>Roadmap</span></li>
               <li className={activeNavItem === 'Team' ? 'is-active' : ''} onClick={() => handleNavItemClick('Team')}><span>Team</span></li>
+              <li className={activeNavItem === 'Socials' ? 'is-active' : ''} onClick={() => handleNavItemClick('Socials')}><span>Socials</span></li>
            </ul>
         </nav>
       </>

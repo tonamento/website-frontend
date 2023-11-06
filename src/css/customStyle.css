@@ -77,9 +77,9 @@ section#about-section {
     transition: 0.5s ease-in-out;
 }
 
-.masthead {
+#home-section {
     background: url('../img/bg.png');
-    padding-top: 9.5rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
     background-size: 1370px;
     background-position-y: top;
@@ -155,7 +155,7 @@ side-nav{
     left:10px;
     color:#111;
     font-size:14px;
-    font-weight:300;
+    font-weight:700;
     opacity:0;
     visibility:hidden
 }
@@ -203,55 +203,59 @@ side-nav{
 }
 
 #weekly-banner {
-    background: url('../img/banner-2.png');
-    background-size: contain;
-    background-position-y:center;
-    background-position-x:center;
+    background-image: url(../img/banner-2.png);
+    background-color: #ffffff57;
+    background-size: 34vh;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
     height: 130px;
-    /* margin: 5px 0px; */
+    margin: 4px;
 }
 
 #tona-banner {
-    background: url('../img/banner-1.png');
-    background-size: contain;
-    background-position-y:center;
-    background-position-x:center;
+    background-image: url(../img/banner-1.png);
+    background-color: #ffffff57;
+    background-size: 34vh;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
     height: 130px;
-    /* margin: 5px 0px; */
+    margin: 4px;
 }
 
 #lottery-banner {
-    background: url('../img/banner-3.png');
-    background-size: contain;
-    background-position-y:center;
-    background-position-x:center;
+    background-image: url(../img/banner-3.png);
+    background-color: #ffffff57;
+    background-size: 34vh;
+    background-position-x: center;
+    background-position-y: center;
     background-repeat: no-repeat;
     border-radius: 10px;
     width: 380px;
     height: 130px;
-    /* margin: 5px 0px; */
+    margin: 4px;
 }
 
 .intro--options a p {
     position: relative;
     line-height: 35px;
-    top: 30%;
-    left: 10%;
-    font-size: 27px;
+    top: 10%;
+    font-size: 40px;
     font-weight: 400;
-    color: rgb(0, 170, 216);
+    color: #004AAD;
     font-family: 'Bebas Neue', 'Rubik Mono One';
     transition: 0.5s;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .intro--options a p:hover {
-    color: #004AAD;
+    color: #FFF;
 }
 
 #whats-text {

@@ -22,6 +22,7 @@ import './css/responsive.css';
 
 function App() {
   const [opacity, setOpacity] = useState(1);
+  const [zIndex, setZIndex] = useState(0);
 
   const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
@@ -34,6 +35,14 @@ function App() {
       } else {
         setOpacity(0.15);
       }
+
+      // if (currentScrollPos > 1200) {
+      //   if (window.innerWidth <= 600) {
+      //     setZIndex(-1)
+      //   } else {
+      //     setZIndex(1)
+      //   }
+      // }
 };
 
   const moveElement = () => {
@@ -189,7 +198,7 @@ function App() {
   return (
   <div className="App"> 
      <div className="cursor"></div>
-     <div className="header-bg" style={{opacity:opacity}}></div>
+     <div className="header-bg" style={{opacity:opacity, zIndex: zIndex}}></div>
       <div className="perspective effect-rotate-left">
      <Header />
      <header className="masthead" id='home-section'>
@@ -209,7 +218,7 @@ function App() {
                           <p>TonaChat</p>
                         </a>
                         <a href="#0" className='home-banner' id='lottery-banner'>
-                          <p>Table<br/>Score</p>
+                          <p>Leader<br/>Board</p>
                         </a>
                       </div>
                     <div className="col-lg-6">
@@ -236,7 +245,7 @@ function App() {
                             </svg>
                         </div>
                      </div>
-                    <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0">
+                    <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0" style={{zIndex:10}}>
                         <div className="container-fluid px-5">
                             <div className="row gx-5">
                                 <div className="col-md-6 mb-5 whats-text-parent-div">

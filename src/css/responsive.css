@@ -34,7 +34,6 @@
     h1.display-1.lh-1.mb-3 {
         margin-left: 15px;
         font-size: 45px !important;
-        font-family: "Fugaz One" !important;
     }
     #whats-title {
         margin-top: 180px !important;
@@ -55,10 +54,11 @@
     }
     .col-lg-6.intro--options.mt-5 {
         position: absolute;
-        width: 340px;
+        width: 100vh;
         top: 475px;
-        right: 0%;
-        left: auto;
+        left: 0vh;
+        margin-left: auto;
+        margin-right: auto;
         justify-content: center;
         padding: 0px;
     }
@@ -69,9 +69,7 @@
         display: none;
     }
     #home-element-two {
-        width: 250px !important;
-        top: 25%;
-        left: 14%;
+        display: none;
     }
     #whats-element-one {
         width: 90px !important;
@@ -170,7 +168,7 @@
 
 @media (max-width: 600px) and (min-height: 675px) and (max-height: 900px) {
     .col-lg-6.intro--options.mt-5 {
-        left: 7vw;
+        left: 0vh;
         top: 60vh;
     }
     .intro--options>a {

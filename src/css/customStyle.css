@@ -200,9 +200,10 @@ side-nav{
     -webkit-transition:opacity .4s ease-in-out;
     transition:opacity .4s ease-in-out
 }
-.side-nav li.is-active::before{
-    left:-33px;
-    color:#fff
+section#socials-section img {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
 }
 
 .home-banner {

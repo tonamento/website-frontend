@@ -28,7 +28,7 @@ function Header() {
                 <Nav.Link href="#socials-section">Socials</Nav.Link>
             </Nav>
             <Nav id="launch-nav">
-                <Nav.Link href="https://playground.tonamento.app" target="_blank" style={{backgroundColor: 'black',borderRadius: '10px', padding: '6px 20px', color: 'white'}}>Inter Playground</Nav.Link>
+                <Nav.Link href="https://playground.tonamento.app" target="_blank" style={{backgroundColor: '#2937F0',borderRadius: '10px', padding: '6px 20px', color: 'white', textAlign: 'center', fontWeight: 'bold'}}>Inter Playground</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

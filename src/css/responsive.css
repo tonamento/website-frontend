@@ -194,12 +194,6 @@
     }
 }
 
-@media (width:360px){
-    .header-bg, #socials-section, footer {
-        width: 110vw;
-    }
-}
-
 @media (min-width:330px) and (max-width:400px) {
     h1.display-1.lh-1.mb-3 {
         font-size: 50px !important;

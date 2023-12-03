@@ -23,12 +23,12 @@ function Header() {
             <Nav className="mr-auto" id="nav-links">
                 <Nav.Link href="">Whitepaper</Nav.Link>
                 <Nav.Link href="#roadmap-section">Roadmap</Nav.Link>
-                <Nav.Link href="https://docs.tonamento.app">Docs</Nav.Link>
+                <Nav.Link href="https://docs.tonamento.app" target="_blank">Docs</Nav.Link>
                 <Nav.Link href="#team-section">Team</Nav.Link>
                 <Nav.Link href="#socials-section">Socials</Nav.Link>
             </Nav>
             <Nav id="launch-nav">
-                <Nav.Link href="https://playground.tonamento.app" style={{backgroundColor: 'black',borderRadius: '10px', padding: '6px 20px', color: 'white'}}>Inter Playground</Nav.Link>
+                <Nav.Link href="https://playground.tonamento.app" target="_blank" style={{backgroundColor: 'black',borderRadius: '10px', padding: '6px 20px', color: 'white'}}>Inter Playground</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar>

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import logo from '../img/logo.png'
-import $ from 'jquery';
+import { Navbar, Nav } from 'react-bootstrap';
 
 function Header() {
     const [activeNavItem, setActiveNavItem] = useState('Home');
@@ -15,28 +15,24 @@ function Header() {
 
   return (
       <>
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-            <img id="tona-logo" src={logo} width={50}/>
-            <div className="container px-5">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i className="bi-list"></i>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li className="nav-item"><a className="nav-link me-lg-3" href="#about-section">Whitepaper</a></li>
-                        <li className="nav-item"><a className="nav-link me-lg-3" href="#download">Roadmap</a></li>
-                    </ul>
-                    <button className="btn btn-primary px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-                        <span className="d-flex align-items-center">
-                            <i className="bi-chat-text-fill me-2"></i>
-                            <span className="small">Playground</span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-         <nav className="l-side-nav">
+       <Navbar bg="light" expand="lg" id="main-nav">
+        {/* navbar logo here */}
+        <Navbar.Brand href={'#home-section'}><img src={logo} alt="logo" width={40} /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarResponsive" />
+        <Navbar.Collapse id="navbarResponsive">
+            <Nav className="mr-auto" id="nav-links">
+                <Nav.Link href="">Whitepaper</Nav.Link>
+                <Nav.Link href="#roadmap-section">Roadmap</Nav.Link>
+                <Nav.Link href="https://docs.tonamento.app">Docs</Nav.Link>
+                <Nav.Link href="#team-section">Team</Nav.Link>
+                <Nav.Link href="#socials-section">Socials</Nav.Link>
+            </Nav>
+            <Nav id="launch-nav">
+                <Nav.Link href="https://playground.tonamento.app" style={{backgroundColor: 'black',borderRadius: '10px', padding: '6px 20px', color: 'white'}}>Inter Playground</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+      <nav className="l-side-nav">
           <div id='nav-cover'></div>
            <ul className="side-nav">
               <li className={activeNavItem === 'Home' ? 'is-active' : ''} onClick={() => handleNavItemClick('Home')}><span>Home</span></li>

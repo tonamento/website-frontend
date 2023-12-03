@@ -13,7 +13,10 @@ body {
     cursor: none;
 }
 
-#mainNav {
+#main-nav {
+  position: absolute;
+  z-index: 9999;
+  width: 95vw;
   padding: 0.35rem;
   background-color: #fff;
   margin: 10px 20px;
@@ -118,11 +121,6 @@ section#about-section {
     background-color: #000;
     opacity: .35;
     z-index: 0;
-}
-@media (max-width: 1180px){
-    .l-side-nav{
-        display:none
-    }
 }
 side-nav{
     position:relative;
@@ -299,3 +297,7 @@ section#socials-section img {
     border-radius: 15px;
 }
 
+#launch-nav {
+    margin-left: auto;
+    margin-right: 10px;
+}

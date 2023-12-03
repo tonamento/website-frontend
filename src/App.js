@@ -1,8 +1,5 @@
-import logo from './img/logo.png';
-// import './js/main.70a66962.js'
 import React, { useEffect, useState } from 'react';
 import $ from 'jquery';
-import { throttle } from 'lodash';
 import elementOne from "./img/elements.png";
 import qElement from "./img/question-mark.png";
 import owl_profile from "./img/owl-profile.jpg";

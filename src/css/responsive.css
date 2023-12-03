@@ -164,6 +164,19 @@
     .intro--options{
         display:none;
     }
+    #nav-links a {
+        margin: 5px 10px;
+        border-bottom: 1px solid grey;
+    }
+    .l-side-nav{
+        display:none
+    }
+    #launch-nav {
+        margin: 10px;
+    }
+    #main-nav {
+        width: 90vw;
+    }
 }
 
 @media (max-width: 600px) and (min-height: 675px) and (max-height: 900px) {

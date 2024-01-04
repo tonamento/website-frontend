@@ -155,8 +155,12 @@
         padding-right: 0px;
     }
     .intro--options a p {
-        left: 15%;
-        font-size: 35px;
+        left: 5%;
+        font-size: 38px;
+    }
+    #tona-banner p {
+        top: 24%;
+        left: 2%;
     }
 }
 

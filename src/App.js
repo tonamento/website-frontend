@@ -33,14 +33,6 @@ function App() {
       } else {
         setOpacity(0.15);
       }
-
-      // if (currentScrollPos > 1200) {
-      //   if (window.innerWidth <= 600) {
-      //     setZIndex(-1)
-      //   } else {
-      //     setZIndex(1)
-      //   }
-      // }
 };
 
   const moveElement = () => {
@@ -183,6 +175,10 @@ function App() {
   // listen for events
   window.addEventListener("scroll", callbackFunc);
 }
+
+  const handleHomeBannerClick = () => {
+    alert('This featurs is not available yet. Please come back')
+  }
   
   useEffect(() => {
     cursor();
@@ -209,13 +205,13 @@ function App() {
                         </div>
                     </div>
                     <div className="col-lg-6 intro--options mt-5">
-                        <a href="#0" className='home-banner' id='weekly-banner'>
+                        <a href="#0" className='home-banner' id='weekly-banner' onClick={handleHomeBannerClick}>
                           <p>Weekly <br/>Tour</p>
                         </a>
-                        <a href="#0" className='home-banner' id='tona-banner'>
+                        <a href="#0" className='home-banner' id='tona-banner' onClick={handleHomeBannerClick}>
                           <p>TonaChat</p>
                         </a>
-                        <a href="#0" className='home-banner' id='lottery-banner'>
+                        <a href="#0" className='home-banner' id='lottery-banner' onClick={handleHomeBannerClick}>
                           <p>Leader<br/>Board</p>
                         </a>
                       </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Helmet} from "react-helmet-async";
 import $ from 'jquery';
 import elementOne from "./img/elements.png";
 import qElement from "./img/question-mark.png";
@@ -32,14 +33,6 @@ function App() {
       } else {
         setOpacity(0.15);
       }
-
-      // if (currentScrollPos > 1200) {
-      //   if (window.innerWidth <= 600) {
-      //     setZIndex(-1)
-      //   } else {
-      //     setZIndex(1)
-      //   }
-      // }
 };
 
   const moveElement = () => {
@@ -182,6 +175,10 @@ function App() {
   // listen for events
   window.addEventListener("scroll", callbackFunc);
 }
+
+  const handleHomeBannerClick = () => {
+    alert('This featurs is not available yet. Please come back')
+  }
   
   useEffect(() => {
     cursor();
@@ -208,13 +205,13 @@ function App() {
                         </div>
                     </div>
                     <div className="col-lg-6 intro--options mt-5">
-                        <a href="#0" className='home-banner' id='weekly-banner'>
+                        <a href="#0" className='home-banner' id='weekly-banner' onClick={handleHomeBannerClick}>
                           <p>Weekly <br/>Tour</p>
                         </a>
-                        <a href="#0" className='home-banner' id='tona-banner'>
+                        <a href="#0" className='home-banner' id='tona-banner' onClick={handleHomeBannerClick}>
                           <p>TonaChat</p>
                         </a>
-                        <a href="#0" className='home-banner' id='lottery-banner'>
+                        <a href="#0" className='home-banner' id='lottery-banner' onClick={handleHomeBannerClick}>
                           <p>Leader<br/>Board</p>
                         </a>
                       </div>
@@ -226,42 +223,52 @@ function App() {
             </div>
       </header>
      <section className='mt-5' id="info-section">
-            <div className="container px-5 mt-5">
-                <div className="row gx-5 align-items-center">
-                    <div className="col-lg-4 order-lg-0">
-                        <div className="features-device-mockup">
-                           <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"300px"}}/>
-                             <h1 className="display-1 lh-1 mb-3" id='whats-title'>What's Tonamento?</h1>                                      
-                            <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="50" cy="50" r="50"></circle></svg>
-                                 <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
-                                 <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
-                                 <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="50"></circle>
-                            </svg>
-                        </div>
-                     </div>
-                    <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0" style={{zIndex:10}}>
-                        <div className="container-fluid px-5">
-                            <div className="row gx-5">
-                                <div className="col-md-6 mb-5 whats-text-parent-div">
-                                    <div className="text-center ml-5">
-                                        <i className="bi-phone icon-feature text-gradient d-block mb-3"></i>
-                                       <p className="mb-0" id='whats-text'>Tonamento: The First Decentralized Game Brokerage in the world!<br/>
+        <Helmet>
+            <title>What's Tonamento?</title>
+            <meta name="description" content="The First Decentralized Game Brokerage in the world! with Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them."/>
+            <link rel="canonical" href="https://tonamento.app/#info-section" />
+        </Helmet>
+        <div className="container px-5 mt-5">
+            <div className="row gx-5 align-items-center">
+                <div className="col-lg-4 order-lg-0">
+                    <div className="features-device-mockup">
+                        <img className="event-element" id="whats-element-one" src={qElement} alt="Welcome" style={{width:"300px"}}/>
+                          <h1 className="display-1 lh-1 mb-3" id='whats-title'>What's Tonamento?</h1>                                      
+                        <svg className="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="50" cy="50" r="50"></circle></svg>
+                              <svg className="shape-1 d-none d-sm-block" viewBox="0 0 240.83 240.83" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(120.42 -49.88) rotate(45)"></rect>
+                              <rect x="-32.54" y="78.39" width="305.92" height="84.05" rx="42.03" transform="translate(-49.88 120.42) rotate(-45)"></rect></svg>
+                              <svg className="shape-2 d-none d-sm-block" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50"></circle>
+                        </svg>
+                    </div>
+                  </div>
+                <div className="col-lg-8 order-lg-1 mb-5 mb-lg-0" style={{zIndex:10}}>
+                    <div className="container-fluid px-5">
+                        <div className="row gx-5">
+                            <div className="col-md-6 mb-5 whats-text-parent-div">
+                                <div className="text-center ml-5">
+                                    <i className="bi-phone icon-feature text-gradient d-block mb-3"></i>
+                                    <p className="mb-0" id='whats-text'>Tonamento: The First Decentralized Game Brokerage in the world!<br/>
 In Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them.<br/>
 Throughout the week, you can increase your rank on the leaderboard by collecting points.<br/> This will grant you permission to participate in weekly competitions, where you have the chance to win unique weekly prizes.<br/>
 As you gain experience, enhance your skills, achieve special milestones, and convert your efforts into NFTs.<br/> You can either sell them in the market or keep them to enhance your profile and utilize their unique features in games.<br/>
 Tonamento guarantees a stable income because the game's economic system is designed to withstand market fluctuations without affecting your earnings.</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
       </section>
      <section className="bg-blue" id='roadmap-section'>
+        <Helmet>
+            <title>Roadmap</title>
+            <meta name="description" content="The Roadmap of Tonamento project"/>
+            <link rel="canonical" href="https://tonamento.app/#roadmap-section" />
+        </Helmet>
         <div>
            <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>Roadmap Section</h1>
            <ul id='parent-ul'>
@@ -326,6 +333,11 @@ Tonamento guarantees a stable income because the game's economic system is desig
         </div>
       </section>
      <section className="bg-blue" id='team-section'>
+        <Helmet>
+            <title>CoreTeam</title>
+            <meta name="description" content="The Team of Tonamento"/>
+            <link rel="canonical" href="https://tonamento.app/#team-section" />
+        </Helmet>
         <div>
            <h1 className='display-1 lh-1 mb-3' id='roadmap-title'>CoreTeam</h1>
            <div class="team-section">
@@ -384,7 +396,12 @@ Tonamento guarantees a stable income because the game's economic system is desig
         </div>
       </section>
      <section className="bg-gradient-primary-to-secondary" id="socials-section">
-            <div className="container px-5 text-center">
+         <Helmet>
+            <title>Socials network</title>
+            <meta name="description" content="Socials and community links of Tonamento"/>
+            <link rel="canonical" href="https://tonamento.app/#socials-section" />
+         </Helmet>
+          <div className="container px-5 text-center">
             <h1 className="display-1 lh-1 mb-3">Join our community!</h1>
             <div className='d-flex px-1 mt-5 justify-content-center' style={{filter:'invert(1)'}}>
                 <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center">
@@ -466,6 +483,11 @@ Tonamento guarantees a stable income because the game's economic system is desig
             </div>
        </div>
     </div>
+    <Helmet>
+        <title>Tonamento</title>
+        <meta name="description" content="The First Decentralized Game Brokerage in the world! with Tonamento, you can enjoy exciting mini-games while having fun and making money, meeting new friends, and sharing your skills and experiences with them."/>
+        <link rel="canonical" href="https://tonamento.app/" />
+    </Helmet>
   </div>
   );
 }
